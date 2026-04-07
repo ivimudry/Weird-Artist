@@ -277,13 +277,8 @@
   }
 
   .menu-list__link {
-    font-family: var(--menu-top-level-font-family);
-    font-style: var(--menu-top-level-font-style);
-    font-weight: var(--menu-top-level-font-weight);
-    font-size: var(--menu-top-level-font-size);
-    line-height: var(--menu-top-level-font-line-height);
-    text-transform: var(--menu-top-level-font-case);
-    color: var(--menu-top-level-font-color);
+    /* WA: override all theme font/color with our Raycast style */
+    color: rgba(255, 255, 255, 0.4);
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -291,16 +286,18 @@
     cursor: pointer;
     height: 100%;
     margin-block: 0;
-
-    /* WA: removed ::after safety-box overlay that blocked hover */
+    font-size: 0.875rem;
+    font-weight: 400;
+    transition: color 0.15s ease;
+    letter-spacing: 0.005em;
 
     &:hover,
     &:focus {
-      /* WA: removed theme color override */
+      color: rgba(255, 255, 255, 0.85);
     }
 
     @media screen and (min-width: 750px) {
-      font-size: var(--menu-top-level-font-size-desktop);
+      font-size: 0.875rem;
     }
   }
 
