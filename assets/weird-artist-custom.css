@@ -96,7 +96,7 @@ header-component[data-sticky-state="active"] {
   align-items: center !important;
   justify-content: space-between !important;
   gap: 0 !important;
-  padding: 16px 24px !important;
+  padding: 16px 24px 16px 30px !important;
 }
 
 /* ── Logo column ── */
@@ -116,7 +116,7 @@ header-component[data-sticky-state="active"] {
   white-space: nowrap;
   display: inline-flex !important;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 /* Logo icon */
