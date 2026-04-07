@@ -5,9 +5,17 @@
    ══════════════════════════════════════════════════════════ */
 
 /* Hide hero placeholder illustration */
+.hero__media-wrapper,
+.hero__media,
 .hero__media-wrapper svg.hero__media,
-.hero__media-wrapper .placeholder-svg {
+.hero__media-wrapper .placeholder-svg,
+.hero .hero__media-wrapper {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
 }
 
 /* Hide cart icon */
@@ -51,13 +59,23 @@ shopify-account {
 header-component {
   max-width: 1440px;
   margin: 0 auto;
-  background: rgba(17, 17, 22, 0.82) !important;
+  background: rgba(14, 14, 18, 0.92) !important;
   backdrop-filter: blur(24px) saturate(1.4) !important;
   -webkit-backdrop-filter: blur(24px) saturate(1.4) !important;
   border: 1px solid rgba(255, 255, 255, 0.06) !important;
   border-radius: 14px !important;
   pointer-events: auto;
   overflow: visible !important;
+}
+
+/* Keep pill style when sticky/scrolled */
+header-component[data-sticky-state],
+header-component[data-sticky-state="active"] {
+  background: rgba(14, 14, 18, 0.92) !important;
+  backdrop-filter: blur(24px) saturate(1.4) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(1.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 14px !important;
 }
 
 /* Header row — remove extra backgrounds */
@@ -97,18 +115,21 @@ header-component {
   gap: 8px;
 }
 
-/* ── Nav links column ── */
+/* ── Nav links column — centered like Raycast ── */
 .header-menu,
 .header__menu,
 .header__column:has(.header-menu) {
   flex: 1 1 auto !important;
-  justify-content: flex-start !important;
+  justify-content: center !important;
+  display: flex !important;
 }
 
 /* Nav links — Raycast style: gray text, subtle lighter hover */
 .header-menu a,
 .header-menu .menu-list__link,
-.menu-list__link {
+.menu-list__link,
+.header .menu-list__link,
+.header__row a:not(.wa-header-cta):not(.header-logo a) {
   color: rgba(255, 255, 255, 0.4) !important;
   font-size: 0.875rem !important;
   font-weight: 400 !important;
@@ -121,7 +142,8 @@ header-component {
 
 .header-menu a:hover,
 .header-menu .menu-list__link:hover,
-.menu-list__link:hover {
+.menu-list__link:hover,
+.header .menu-list__link:hover {
   color: rgba(255, 255, 255, 0.72) !important;
 }
 
