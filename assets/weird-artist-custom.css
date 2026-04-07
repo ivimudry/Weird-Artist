@@ -1,4 +1,54 @@
-/* Weird Artist — Custom Styles */
+/* Weird Artist — Custom Styles (Raycast-inspired) */
+
+/* ── RESET: Hide default Shopify theme elements ── */
+
+/* Hide hero placeholder illustration (shows when no image uploaded) */
+.hero__media-wrapper svg.hero__media,
+.hero__media-wrapper .placeholder-svg {
+  display: none !important;
+}
+
+/* Hide cart icon */
+cart-drawer-trigger,
+.header-actions__action[href*="cart"],
+a[href*="/cart"] .header-actions__action {
+  display: none !important;
+}
+
+/* Hide account icon */
+.account-button,
+.header-actions__action[href*="account"],
+header-actions a[href*="account"] {
+  display: none !important;
+}
+
+/* Hide header actions container if empty */
+header-actions:empty {
+  display: none !important;
+}
+
+/* ── HEADER: Raycast-style glass nav ── */
+#header-group {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Nav links — Raycast style (muted white, brighter on hover) */
+.header__menu a,
+.header__menu-list a {
+  color: rgba(255, 255, 255, 0.6) !important;
+  transition: color 0.15s ease;
+}
+
+.header__menu a:hover,
+.header__menu-list a:hover {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+/* ── HERO: Clean dark background ── */
+.hero {
+  background-color: var(--color-background) !important;
+}
 
 /* Gradient glow behind hero heading */
 .hero-glow {
@@ -31,7 +81,7 @@
   background-clip: text;
 }
 
-/* Glass-effect cards (Raycast style) */
+/* ── CARDS: Glass-effect (Raycast style) ── */
 .glass-card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -39,13 +89,7 @@
   backdrop-filter: blur(20px);
 }
 
-/* Smooth hover transitions for all interactive elements */
+/* ── GLOBAL: Smooth transitions ── */
 a, button, .button {
   transition: all 0.2s ease;
-}
-
-/* Header glass effect (transparent on scroll) */
-#header-group {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
