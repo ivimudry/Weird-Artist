@@ -135,6 +135,10 @@ header-component[data-sticky-state="active"] {
   width: auto !important;
   min-width: 0 !important;
   z-index: 2;
+  pointer-events: none;
+}
+.header__column--left > * {
+  pointer-events: auto;
 }
 
 /* ── Group 3: Nav — absolutely centered ── */
@@ -146,7 +150,8 @@ header-component[data-sticky-state="active"] {
   transform: translate(-50%, -50%) !important;
   display: flex !important;
   justify-content: center !important;
-  z-index: 1;
+  z-index: 3;
+  pointer-events: auto;
 }
 
 /* ── Group 2: Actions — 12px from right ── */
@@ -159,6 +164,11 @@ header-actions {
   align-items: center !important;
   gap: 8px !important;
   z-index: 2;
+  pointer-events: none;
+}
+.header__column--right > *,
+header-actions > * {
+  pointer-events: auto;
 }
 
 /* Kill any theme padding on logo link */
