@@ -422,6 +422,50 @@
   }
 {% endstyle %}
 
+<!-- WA: Force nav hover + glass blur via JS (nuclear approach) -->
+<script>
+  (function() {
+    function applyHeaderStyles() {
+      // ── Glass blur: strip ALL backgrounds from inner elements ──
+      var hc = document.getElementById('header-component');
+      if (hc) {
+        hc.style.setProperty('background', 'rgba(14,14,18,0.35)', 'important');
+        hc.style.setProperty('backdrop-filter', 'blur(12px) saturate(1.5)', 'important');
+        hc.style.setProperty('-webkit-backdrop-filter', 'blur(12px) saturate(1.5)', 'important');
+        // Kill all inner backgrounds
+        hc.querySelectorAll('[class*="color-"], .header__row, .header__underlay, .header__underlay-closed, .header__underlay-open').forEach(function(el) {
+          el.style.setProperty('background', 'transparent', 'important');
+          el.style.setProperty('background-color', 'transparent', 'important');
+        });
+      }
+
+      // ── Nav hover: attach pointer listeners ──
+      document.querySelectorAll('.menu-list__link').forEach(function(link) {
+        if (link.dataset.waHover) return; // already attached
+        link.dataset.waHover = '1';
+        link.style.setProperty('color', 'rgba(255,255,255,0.4)', 'important');
+        link.style.setProperty('transition', 'color 0.15s ease', 'important');
+        link.addEventListener('mouseenter', function() {
+          link.style.setProperty('color', 'rgba(255,255,255,0.85)', 'important');
+        });
+        link.addEventListener('mouseleave', function() {
+          link.style.setProperty('color', 'rgba(255,255,255,0.4)', 'important');
+        });
+      });
+    }
+
+    // Run on load and after hydration
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', applyHeaderStyles);
+    } else {
+      applyHeaderStyles();
+    }
+    // Re-run after Shopify hydration (slight delay)
+    setTimeout(applyHeaderStyles, 500);
+    setTimeout(applyHeaderStyles, 1500);
+  })();
+</script>
+
 <script
   src="{{ 'header.js' | asset_url }}"
   type="module"
