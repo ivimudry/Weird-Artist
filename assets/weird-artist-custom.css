@@ -87,7 +87,7 @@ header-component[data-sticky-state="active"] {
 }
 
 .header__row--top {
-  padding: 0 8px !important;
+  padding: 0 !important;
 }
 
 /* Header columns — flex layout */
@@ -96,12 +96,20 @@ header-component[data-sticky-state="active"] {
   align-items: center !important;
   justify-content: space-between !important;
   gap: 0 !important;
-  padding: 16px 24px 16px 30px !important;
+  padding: 16px 24px !important;
 }
 
 /* ── Logo column ── */
 .header__column:first-child {
   flex: 0 0 auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Kill any theme padding on logo link */
+.header-logo {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 /* Logo text styling */
