@@ -1,3 +1,6 @@
 
 # Shopify API credentials
 .shopify-api/
+
+*.png
+!assets/*.png
