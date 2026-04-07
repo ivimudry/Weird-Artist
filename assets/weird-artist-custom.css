@@ -127,10 +127,10 @@ header-component[data-sticky-state="active"] {
   --gap-xl: 0px;
 }
 
-/* ── Group 1: Logo — 30px from left ── */
+/* ── Group 1: Logo — 16px from left ── */
 .header__column--left {
   flex: 0 0 auto !important;
-  padding: 0 0 0 30px !important;
+  padding: 0 0 0 16px !important;
   margin: 0 !important;
   width: auto !important;
   min-width: 0 !important;
@@ -149,12 +149,12 @@ header-component[data-sticky-state="active"] {
   z-index: 1;
 }
 
-/* ── Group 2: Actions — 30px from right ── */
+/* ── Group 2: Actions — 16px from right ── */
 .header__column--right,
 header-actions {
   margin-left: auto !important;
   flex: 0 0 auto !important;
-  padding: 0 30px 0 0 !important;
+  padding: 0 16px 0 0 !important;
   display: flex !important;
   align-items: center !important;
   gap: 8px !important;
