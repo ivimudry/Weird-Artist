@@ -50,7 +50,7 @@ shopify-account {
   background: transparent !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  padding: 16px 40px 0;
+  padding: 16px 64px 0;
   pointer-events: none;
 }
 
@@ -59,9 +59,9 @@ shopify-account {
 header-component {
   max-width: 1440px;
   margin: 0 auto;
-  background: rgba(14, 14, 18, 0.55) !important;
-  backdrop-filter: blur(40px) saturate(1.6) brightness(1.1) !important;
-  -webkit-backdrop-filter: blur(40px) saturate(1.6) brightness(1.1) !important;
+  background: rgba(14, 14, 18, 0.72) !important;
+  backdrop-filter: blur(14px) saturate(1.3) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(1.3) !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-radius: 14px !important;
   pointer-events: auto;
@@ -74,9 +74,9 @@ header-component {
 /* Keep pill style when sticky/scrolled */
 header-component[data-sticky-state],
 header-component[data-sticky-state="active"] {
-  background: rgba(14, 14, 18, 0.55) !important;
-  backdrop-filter: blur(40px) saturate(1.6) brightness(1.1) !important;
-  -webkit-backdrop-filter: blur(40px) saturate(1.6) brightness(1.1) !important;
+  background: rgba(14, 14, 18, 0.72) !important;
+  backdrop-filter: blur(14px) saturate(1.3) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(1.3) !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-radius: 14px !important;
 }
