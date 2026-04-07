@@ -289,22 +289,9 @@
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
-    height: 100%;
     margin-block: 0;
 
-    &::after {
-      content: '';
-      position: absolute;
-      display: none;
-      top: var(--header-padding);
-      height: var(--box-height);
-      left: 0;
-      right: 0;
-    }
-
-    &[data-safety-box='true']::after {
-      display: block;
-    }
+    /* WA: removed ::after safety-box overlay that blocked hover */
 
     &:hover,
     &:focus {
@@ -326,16 +313,9 @@
   .menu-list__list-item:not([slot='overflow']) {
     flex-direction: column;
   }
-  .menu-list__list-item:not([slot='overflow'])::after {
-    content: '';
-    width: 100%;
-    height: var(--header-padding);
-    margin-bottom: calc(-1 * var(--header-padding));
-  }
+  /* WA: removed list-item ::after overlay */
 
-  [slot='overflow'] > .menu-list__link::after {
-    content: none;
-  }
+  /* WA: removed overflow link ::after (no longer needed) */
 
   /*
     WA: removed theme subdued-on-hover selectors
