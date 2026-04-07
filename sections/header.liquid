@@ -335,7 +335,7 @@
   {% for row in rows %}
     {% liquid
       assign scheme = 'color_scheme_' | append: row
-      assign class = 'header__row header__row--[row] color-[row_scheme] section section--full-width-margin section--[section-width]' | replace: '[row]', row | replace: '[row_scheme]', section.settings[scheme] | replace: '[section-width]', section.settings.section_width
+      assign class = 'header__row header__row--[row] color-[row_scheme]' | replace: '[row]', row | replace: '[row_scheme]', section.settings[scheme]
 
       case row
         when 'top'
@@ -388,7 +388,7 @@
           style="{{ style | strip }}"
         {%- endif -%}
       >
-        <div class="header__columns spacing-style">
+        <div class="header__columns">
           {{ content }}
         </div>
       </div>
