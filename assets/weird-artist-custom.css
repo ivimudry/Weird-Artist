@@ -84,26 +84,39 @@ header-component[data-sticky-state="active"] {
 /* Header row — remove extra backgrounds */
 .header__row {
   background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .header__row--top {
   padding: 0 !important;
+  margin: 0 !important;
 }
 
-/* Header columns — flex layout */
+/* Header columns — override grid to flex, kill all theme spacing */
 .header__columns {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
   gap: 0 !important;
-  padding: 16px 24px !important;
+  padding: 14px 20px !important;
+  padding-inline: 20px !important;
+  padding-block: 14px !important;
+  margin: 0 !important;
+  grid-gap: 0 !important;
+  column-gap: 0 !important;
+  --section-padding-inline: 0px;
+  --gap-xl: 0px;
 }
 
 /* ── Logo column ── */
-.header__column:first-child {
+.header__column:first-child,
+.header__column--left {
   flex: 0 0 auto !important;
   padding: 0 !important;
   margin: 0 !important;
+  width: auto !important;
+  min-width: 0 !important;
 }
 
 /* Kill any theme padding on logo link */
