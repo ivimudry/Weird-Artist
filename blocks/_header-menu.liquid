@@ -190,6 +190,20 @@
   .header__underlay {
     --color-submenu: rgb({{ block_settings.color_scheme.settings.background.rgba }});
   }
+
+  /* WA: Nav link colors — injected via {% style %} to bypass stylesheet cache */
+  .menu-list__link {
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 0.875rem !important;
+    font-weight: 400 !important;
+    transition: color 0.15s ease !important;
+    letter-spacing: 0.005em !important;
+    text-transform: none !important;
+  }
+  .menu-list__link:hover,
+  .menu-list__link:focus {
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
 {% endstyle %}
 {% stylesheet %}
   .header__drawer {

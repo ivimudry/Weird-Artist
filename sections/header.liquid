@@ -399,6 +399,29 @@
   {% endif %}
 </header-component>
 
+{% style %}
+  /* WA: Force glass blur — injected via {% style %} to bypass stylesheet cache */
+  .header__underlay,
+  .header__underlay-closed,
+  .header__underlay-open,
+  .header__underlay-open::after {
+    display: none !important;
+    background: transparent !important;
+  }
+  #header-component,
+  header-component {
+    background: rgba(14, 14, 18, 0.35) !important;
+    backdrop-filter: blur(12px) saturate(1.5) !important;
+    -webkit-backdrop-filter: blur(12px) saturate(1.5) !important;
+  }
+  header-component[data-sticky-state],
+  header-component[data-sticky-state="active"] {
+    background: rgba(14, 14, 18, 0.35) !important;
+    backdrop-filter: blur(12px) saturate(1.5) !important;
+    -webkit-backdrop-filter: blur(12px) saturate(1.5) !important;
+  }
+{% endstyle %}
+
 <script
   src="{{ 'header.js' | asset_url }}"
   type="module"
