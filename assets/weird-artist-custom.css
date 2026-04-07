@@ -93,30 +93,55 @@ header-component[data-sticky-state="active"] {
   margin: 0 !important;
 }
 
-/* Header columns — override grid to flex, kill all theme spacing */
+/* Header columns — 3-group layout: logo | centered nav | actions */
 .header__columns {
   display: flex !important;
   align-items: center !important;
-  justify-content: space-between !important;
-  gap: 0 !important;
-  padding: 14px 20px !important;
-  padding-inline: 20px !important;
-  padding-block: 14px !important;
+  position: relative !important;
+  padding: 0 !important;
+  padding-inline: 0 !important;
+  padding-block: 0 !important;
   margin: 0 !important;
+  gap: 0 !important;
   grid-gap: 0 !important;
   column-gap: 0 !important;
+  min-height: 56px !important;
   --section-padding-inline: 0px;
   --gap-xl: 0px;
 }
 
-/* ── Logo column ── */
-.header__column:first-child,
+/* ── Group 1: Logo — 30px from left ── */
 .header__column--left {
   flex: 0 0 auto !important;
-  padding: 0 !important;
+  padding: 0 0 0 30px !important;
   margin: 0 !important;
   width: auto !important;
   min-width: 0 !important;
+  z-index: 2;
+}
+
+/* ── Group 3: Nav — absolutely centered ── */
+.header-menu,
+.header__menu {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  display: flex !important;
+  justify-content: center !important;
+  z-index: 1;
+}
+
+/* ── Group 2: Actions — 30px from right ── */
+.header__column--right,
+header-actions {
+  margin-left: auto !important;
+  flex: 0 0 auto !important;
+  padding: 0 30px 0 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  z-index: 2;
 }
 
 /* Kill any theme padding on logo link */
@@ -163,20 +188,14 @@ header-component[data-sticky-state="active"] {
 }
 
 /* ── Nav links column — centered like Raycast ── */
-.header-menu,
-.header__menu,
-.header__column:has(.header-menu) {
-  flex: 1 1 auto !important;
-  justify-content: center !important;
-  display: flex !important;
-}
+/* (position handled above in 3-group layout) */
 
 /* Nav links — Raycast style: gray text, subtle lighter hover */
 .header-menu a,
 .header-menu .menu-list__link,
 .menu-list__link,
 .header .menu-list__link,
-.header__row a:not(.wa-header-cta):not(.header-logo a) {
+.header__row a:not(.wa-header-cta):not(.wa-header-login):not(.header-logo a) {
   color: rgba(255, 255, 255, 0.4) !important;
   font-size: 0.875rem !important;
   font-weight: 400 !important;
@@ -194,11 +213,22 @@ header-component[data-sticky-state="active"] {
   color: rgba(255, 255, 255, 0.72) !important;
 }
 
-/* ── Actions column (CTA button) ── */
-header-actions {
-  display: flex !important;
-  align-items: center !important;
-  flex: 0 0 auto !important;
+/* ── Actions column ── */
+/* (position handled above in 3-group layout) */
+
+/* Login link — same style as nav links */
+.wa-header-login {
+  color: rgba(255, 255, 255, 0.4) !important;
+  font-size: 0.875rem !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  padding: 6px 14px !important;
+  transition: color 0.15s ease !important;
+  letter-spacing: 0.005em;
+}
+
+.wa-header-login:hover {
+  color: rgba(255, 255, 255, 0.72) !important;
 }
 
 /* CTA button — Raycast "Download" style with glow */
