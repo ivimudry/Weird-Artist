@@ -325,10 +325,7 @@
     {% endif %}
   "
 >
-  <div class="header__underlay header__underlay-closed"></div>
-  <div
-    class="header__underlay header__underlay-open"
-  ></div>
+  <!-- WA: removed header underlays that block glass blur -->
   {%- if request.page_type == 'index' -%}
     <h1 class="visually-hidden">{{ shop.name }}</h1>
   {%- endif -%}
