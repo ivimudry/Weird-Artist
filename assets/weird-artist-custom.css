@@ -81,7 +81,7 @@ header-component[data-sticky-state="active"] {
   border-radius: 14px !important;
 }
 
-/* Header row — remove extra backgrounds */
+/* Header row — remove extra backgrounds and page-margin padding */
 .header__row {
   background: transparent !important;
   padding: 0 !important;
@@ -91,6 +91,12 @@ header-component[data-sticky-state="active"] {
 .header__row--top {
   padding: 0 !important;
   margin: 0 !important;
+}
+
+/* Kill page-margin padding from .section--full-width-margin */
+.header__row > .header__columns {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 /* Header columns — 3-group layout: logo | centered nav | actions */
