@@ -410,13 +410,13 @@
   }
   #header-component,
   header-component {
-    background: rgba(14, 14, 18, 0.35) !important;
+    background: rgba(14, 14, 18, 0.18) !important;
     backdrop-filter: blur(12px) saturate(1.5) !important;
     -webkit-backdrop-filter: blur(12px) saturate(1.5) !important;
   }
   header-component[data-sticky-state],
   header-component[data-sticky-state="active"] {
-    background: rgba(14, 14, 18, 0.35) !important;
+    background: rgba(14, 14, 18, 0.18) !important;
     backdrop-filter: blur(12px) saturate(1.5) !important;
     -webkit-backdrop-filter: blur(12px) saturate(1.5) !important;
   }
@@ -429,7 +429,7 @@
       // ── Glass blur: strip ALL backgrounds from inner elements ──
       var hc = document.getElementById('header-component');
       if (hc) {
-        hc.style.setProperty('background', 'rgba(14,14,18,0.35)', 'important');
+        hc.style.setProperty('background', 'rgba(14,14,18,0.18)', 'important');
         hc.style.setProperty('backdrop-filter', 'blur(12px) saturate(1.5)', 'important');
         hc.style.setProperty('-webkit-backdrop-filter', 'blur(12px) saturate(1.5)', 'important');
         // Kill all inner backgrounds
