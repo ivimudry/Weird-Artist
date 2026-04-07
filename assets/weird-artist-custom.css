@@ -1,0 +1,51 @@
+/* Weird Artist — Custom Styles */
+
+/* Gradient glow behind hero heading */
+.hero-glow {
+  position: relative;
+}
+
+.hero-glow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(219, 131, 234, 0.15) 0%,
+    rgba(99, 130, 240, 0.08) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Subtle gradient text effect for headings */
+.gradient-text {
+  background: linear-gradient(135deg, #F9D7F8, #DB83EA, #7E79E5, #6382F0, #20A5EC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass-effect cards (Raycast style) */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  backdrop-filter: blur(20px);
+}
+
+/* Smooth hover transitions for all interactive elements */
+a, button, .button {
+  transition: all 0.2s ease;
+}
+
+/* Header glass effect (transparent on scroll) */
+#header-group {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
