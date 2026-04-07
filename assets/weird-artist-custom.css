@@ -94,9 +94,20 @@ header-component[data-sticky-state="active"] {
 }
 
 /* Kill page-margin padding from .section--full-width-margin */
-.header__row > .header__columns {
+.header__row > .header__columns,
+.header__row .header__columns,
+.section--full-width-margin > .header__columns,
+.header__columns.spacing-style,
+#header-component .header__columns {
   padding-left: 0 !important;
   padding-right: 0 !important;
+  padding-inline: 0 !important;
+  padding-inline-start: 0 !important;
+  padding-inline-end: 0 !important;
+  --padding-inline: 0px !important;
+  --padding-inline-start: 0px !important;
+  --padding-inline-end: 0px !important;
+  --page-margin: 0px !important;
 }
 
 /* Header columns — 3-group layout: logo | centered nav | actions */
