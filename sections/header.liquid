@@ -410,15 +410,17 @@
   }
   #header-component,
   header-component {
-    background: rgba(14, 14, 18, 0.18) !important;
-    backdrop-filter: blur(12px) saturate(1.5) !important;
-    -webkit-backdrop-filter: blur(12px) saturate(1.5) !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    box-shadow: 0 4px 4px 0 rgba(255, 255, 255, 0.15) inset, 0 0 68px 0 rgba(255, 255, 255, 0.05) inset !important;
+    backdrop-filter: blur(2.5px) !important;
+    -webkit-backdrop-filter: blur(2.5px) !important;
   }
   header-component[data-sticky-state],
   header-component[data-sticky-state="active"] {
-    background: rgba(14, 14, 18, 0.18) !important;
-    backdrop-filter: blur(12px) saturate(1.5) !important;
-    -webkit-backdrop-filter: blur(12px) saturate(1.5) !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    box-shadow: 0 4px 4px 0 rgba(255, 255, 255, 0.15) inset, 0 0 68px 0 rgba(255, 255, 255, 0.05) inset !important;
+    backdrop-filter: blur(2.5px) !important;
+    -webkit-backdrop-filter: blur(2.5px) !important;
   }
 {% endstyle %}
 
@@ -426,20 +428,18 @@
 <script>
   (function() {
     function applyHeaderStyles() {
-      // ── TEST: solid red to find which element controls visual bg ──
+      // ── Glass effect ──
       var hc = document.getElementById('header-component');
       if (hc) {
-        hc.style.setProperty('background', 'red', 'important');
-        hc.style.setProperty('background-color', 'red', 'important');
-        hc.style.setProperty('backdrop-filter', 'none', 'important');
-        hc.style.setProperty('-webkit-backdrop-filter', 'none', 'important');
-        // Kill all inner backgrounds AND mark them visually
+        hc.style.setProperty('background', 'rgba(255,255,255,0.03)', 'important');
+        hc.style.setProperty('box-shadow', '0 4px 4px 0 rgba(255,255,255,0.15) inset, 0 0 68px 0 rgba(255,255,255,0.05) inset', 'important');
+        hc.style.setProperty('backdrop-filter', 'blur(2.5px)', 'important');
+        hc.style.setProperty('-webkit-backdrop-filter', 'blur(2.5px)', 'important');
+        // Kill all inner backgrounds
         hc.querySelectorAll('*').forEach(function(el) {
           el.style.setProperty('background', 'transparent', 'important');
           el.style.setProperty('background-color', 'transparent', 'important');
         });
-        // Also add a visible debug border
-        hc.style.setProperty('outline', '3px solid lime', 'important');
       }
 
       // ── Nav hover: attach pointer listeners ──

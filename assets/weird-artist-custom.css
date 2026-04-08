@@ -59,16 +59,14 @@ shopify-account {
 header-component {
   max-width: 90%;
   margin: 16px auto 0;
-  background: rgba(14, 14, 18, 0.18) !important;
-  backdrop-filter: blur(12px) saturate(1.5) !important;
-  -webkit-backdrop-filter: blur(12px) saturate(1.5) !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(2.5px) !important;
+  -webkit-backdrop-filter: blur(2.5px) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 14px !important;
   pointer-events: auto;
   overflow: visible !important;
-  box-shadow:
-    0 0 0 0.5px rgba(255, 255, 255, 0.06),
-    0 8px 40px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 4px 0 rgba(255, 255, 255, 0.15) inset, 0 0 68px 0 rgba(255, 255, 255, 0.05) inset !important;
 }
 
 /* Kill header underlays — they create opaque bg that blocks glass blur */
@@ -82,11 +80,12 @@ header-component {
 /* Keep pill style when sticky/scrolled */
 header-component[data-sticky-state],
 header-component[data-sticky-state="active"] {
-  background: rgba(14, 14, 18, 0.18) !important;
-  backdrop-filter: blur(12px) saturate(1.5) !important;
-  -webkit-backdrop-filter: blur(12px) saturate(1.5) !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  backdrop-filter: blur(2.5px) !important;
+  -webkit-backdrop-filter: blur(2.5px) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 14px !important;
+  box-shadow: 0 4px 4px 0 rgba(255, 255, 255, 0.15) inset, 0 0 68px 0 rgba(255, 255, 255, 0.05) inset !important;
 }
 
 /* Header row — remove extra backgrounds and page-margin padding */
