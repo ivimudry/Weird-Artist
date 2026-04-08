@@ -208,6 +208,13 @@ header-actions > * {
   display: inline-flex !important;
   align-items: center;
   gap: 5px;
+  transition: transform 0.2s ease;
+}
+
+.header__column:first-child a:hover,
+.header-logo a:hover {
+  transform: scale(1.05);
+}
 }
 
 /* Logo icon */
