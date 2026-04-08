@@ -426,17 +426,20 @@
 <script>
   (function() {
     function applyHeaderStyles() {
-      // ── Glass blur: strip ALL backgrounds from inner elements ──
+      // ── TEST: solid red to find which element controls visual bg ──
       var hc = document.getElementById('header-component');
       if (hc) {
-        hc.style.setProperty('background', 'rgba(14,14,18,0.18)', 'important');
-        hc.style.setProperty('backdrop-filter', 'blur(12px) saturate(1.5)', 'important');
-        hc.style.setProperty('-webkit-backdrop-filter', 'blur(12px) saturate(1.5)', 'important');
-        // Kill all inner backgrounds
-        hc.querySelectorAll('[class*="color-"], .header__row, .header__underlay, .header__underlay-closed, .header__underlay-open').forEach(function(el) {
+        hc.style.setProperty('background', 'red', 'important');
+        hc.style.setProperty('background-color', 'red', 'important');
+        hc.style.setProperty('backdrop-filter', 'none', 'important');
+        hc.style.setProperty('-webkit-backdrop-filter', 'none', 'important');
+        // Kill all inner backgrounds AND mark them visually
+        hc.querySelectorAll('*').forEach(function(el) {
           el.style.setProperty('background', 'transparent', 'important');
           el.style.setProperty('background-color', 'transparent', 'important');
         });
+        // Also add a visible debug border
+        hc.style.setProperty('outline', '3px solid lime', 'important');
       }
 
       // ── Nav hover: attach pointer listeners ──
