@@ -445,7 +445,7 @@
       }
 
       // ── Nav hover: attach pointer listeners ──
-      document.querySelectorAll('.menu-list__link').forEach(function(link) {
+      document.querySelectorAll('.menu-list__link, .wa-header-login').forEach(function(link) {
         if (link.dataset.waHover) return; // already attached
         link.dataset.waHover = '1';
         link.style.setProperty('color', 'rgba(255,255,255,0.4)', 'important');

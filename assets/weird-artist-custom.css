@@ -286,6 +286,7 @@ header-menu,
   text-decoration: none !important;
   padding: 6px 14px !important;
   transition: color 0.15s ease !important;
+  border-radius: 8px;
   letter-spacing: 0.005em;
 }
 
