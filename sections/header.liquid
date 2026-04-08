@@ -444,6 +444,20 @@
         });
       }
 
+      // ── Logo hover: force smooth transform transition ──
+      var logoLink = document.querySelector('.header-logo a') || document.querySelector('.header__column--left a');
+      if (logoLink && !logoLink.dataset.waLogo) {
+        logoLink.dataset.waLogo = '1';
+        logoLink.style.setProperty('transition', 'transform 1s cubic-bezier(0.22, 0.61, 0.36, 1)', 'important');
+        logoLink.style.setProperty('will-change', 'transform');
+        logoLink.addEventListener('mouseenter', function() {
+          logoLink.style.setProperty('transform', 'scale(1.05)', 'important');
+        });
+        logoLink.addEventListener('mouseleave', function() {
+          logoLink.style.setProperty('transform', 'scale(1)', 'important');
+        });
+      }
+
       // ── Nav hover: attach pointer listeners ──
       document.querySelectorAll('.menu-list__link, .wa-header-login').forEach(function(link) {
         if (link.dataset.waHover) return; // already attached
