@@ -60,8 +60,8 @@ header-component {
   max-width: 90%;
   margin: 16px auto 0;
   background: rgba(255, 255, 255, 0.03) !important;
-  backdrop-filter: blur(2.5px) !important;
-  -webkit-backdrop-filter: blur(2.5px) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 14px !important;
   pointer-events: auto;
@@ -81,8 +81,8 @@ header-component {
 header-component[data-sticky-state],
 header-component[data-sticky-state="active"] {
   background: rgba(255, 255, 255, 0.03) !important;
-  backdrop-filter: blur(2.5px) !important;
-  -webkit-backdrop-filter: blur(2.5px) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 14px !important;
   box-shadow: 0 4px 4px 0 rgba(255, 255, 255, 0.15) inset, 0 0 68px 0 rgba(255, 255, 255, 0.05) inset !important;
