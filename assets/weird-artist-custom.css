@@ -208,7 +208,9 @@ header-actions > * {
   display: inline-flex !important;
   align-items: center;
   gap: 5px;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transform-origin: left center;
+  will-change: transform;
 }
 
 .header__column:first-child a:hover,
