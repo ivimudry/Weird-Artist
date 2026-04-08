@@ -1,5 +1,8 @@
 /* Weird Artist — Raycast-exact header & global styles */
 
+/* ── Inter font (Raycast uses Inter) ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 /* ══════════════════════════════════════════════════════════
    RESET: Hide default Shopify theme elements
    ══════════════════════════════════════════════════════════ */
@@ -67,6 +70,7 @@ header-component {
   box-shadow: inset 0 1px 1px 0 rgba(255,255,255,.15) !important;
   pointer-events: auto;
   overflow: visible !important;
+  font-family: 'Inter', sans-serif !important;
 }
 
 /* Kill header underlays — they create opaque bg that blocks glass blur */
@@ -245,6 +249,7 @@ header-menu,
 .header .menu-list__link,
 .header__row a:not(.wa-header-cta):not(.wa-header-login):not(.header-logo a) {
   color: rgba(255, 255, 255, 0.4) !important;
+  font-family: 'Inter', sans-serif !important;
   font-size: 0.875rem !important;
   font-weight: 400 !important;
   text-decoration: none !important;
@@ -267,6 +272,7 @@ header-menu,
 /* Login link — same style as nav links */
 .wa-header-login {
   color: rgba(255, 255, 255, 0.4) !important;
+  font-family: 'Inter', sans-serif !important;
   font-size: 0.875rem !important;
   font-weight: 400 !important;
   text-decoration: none !important;
@@ -286,6 +292,7 @@ header-menu,
   gap: 6px;
   background: hsla(0, 0%, 100%, 0.815) !important;
   color: rgb(24, 25, 26) !important;
+  font-family: 'Inter', sans-serif !important;
   font-size: 0.8125rem !important;
   font-weight: 500 !important;
   padding: 8px 18px !important;
