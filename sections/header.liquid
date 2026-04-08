@@ -410,15 +410,17 @@
   }
   #header-component,
   header-component {
-    background: rgba(255, 255, 255, 0.03) !important;
-    backdrop-filter: blur(7.5px) !important;
-    -webkit-backdrop-filter: blur(7.5px) !important;
+    background: linear-gradient(137deg, rgba(17,18,20,.75) 4.87%, rgba(12,13,15,.9) 75.88%) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+    box-shadow: inset 0 1px 1px 0 rgba(255,255,255,.15) !important;
   }
   header-component[data-sticky-state],
   header-component[data-sticky-state="active"] {
-    background: rgba(255, 255, 255, 0.03) !important;
-    backdrop-filter: blur(7.5px) !important;
-    -webkit-backdrop-filter: blur(7.5px) !important;
+    background: linear-gradient(137deg, rgba(17,18,20,.75) 4.87%, rgba(12,13,15,.9) 75.88%) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+    box-shadow: inset 0 1px 1px 0 rgba(255,255,255,.15) !important;
   }
 {% endstyle %}
 
@@ -429,9 +431,11 @@
       // ── Glass effect ──
       var hc = document.getElementById('header-component');
       if (hc) {
-        hc.style.setProperty('background', 'rgba(255,255,255,0.03)', 'important');
-        hc.style.setProperty('backdrop-filter', 'blur(7.5px)', 'important');
-        hc.style.setProperty('-webkit-backdrop-filter', 'blur(7.5px)', 'important');
+        hc.style.setProperty('background', 'linear-gradient(137deg, rgba(17,18,20,.75) 4.87%, rgba(12,13,15,.9) 75.88%)', 'important');
+        hc.style.setProperty('backdrop-filter', 'blur(5px)', 'important');
+        hc.style.setProperty('-webkit-backdrop-filter', 'blur(5px)', 'important');
+        hc.style.setProperty('box-shadow', 'inset 0 1px 1px 0 rgba(255,255,255,.15)', 'important');
+        hc.style.setProperty('border', '1px solid rgba(255,255,255,.06)', 'important');
         // Kill all inner backgrounds
         hc.querySelectorAll('*').forEach(function(el) {
           el.style.setProperty('background', 'transparent', 'important');
