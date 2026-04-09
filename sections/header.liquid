@@ -399,6 +399,16 @@
   {% endif %}
 </header-component>
 
+<!-- WA: Mobile dropdown menu panel -->
+<div class="wa-mobile-menu" id="wa-mobile-menu">
+  <nav class="wa-mobile-menu__nav" id="wa-mobile-nav"></nav>
+  <div class="wa-mobile-menu__divider"></div>
+  <div class="wa-mobile-menu__actions">
+    <a href="/account/login" class="wa-mobile-menu__link">Log in</a>
+    <a href="/pages/contact" class="wa-mobile-menu__cta">Get in touch</a>
+  </div>
+</div>
+
 {% style %}
   /* WA: Force glass blur — injected via inline style block to bypass stylesheet cache */
   .header__underlay,
@@ -436,9 +446,11 @@
         hc.style.setProperty('-webkit-backdrop-filter', 'blur(5px)', 'important');
         hc.style.setProperty('box-shadow', 'inset 0 1px 1px 0 rgba(255,255,255,.15)', 'important');
         hc.style.setProperty('border', '1px solid rgba(255,255,255,.06)', 'important');
-        // Kill all inner backgrounds (except CTA button)
+        // Kill all inner backgrounds (except CTA button and hamburger)
         hc.querySelectorAll('*').forEach(function(el) {
           if (el.classList.contains('wa-header-cta')) return;
+          if (el.classList.contains('wa-menu-toggle')) return;
+          if (el.classList.contains('wa-menu-toggle__line')) return;
           el.style.setProperty('background', 'transparent', 'important');
           el.style.setProperty('background-color', 'transparent', 'important');
         });
@@ -460,7 +472,7 @@
 
       // ── Nav + Login hover: attach pointer listeners ──
       document.querySelectorAll('.menu-list__link, .wa-header-login').forEach(function(link) {
-        if (link.dataset.waHover) return; // already attached
+        if (link.dataset.waHover) return;
         link.dataset.waHover = '1';
         link.style.setProperty('color', 'rgba(255,255,255,0.4)', 'important');
         link.style.setProperty('transition', 'color 0.15s ease', 'important');
@@ -484,6 +496,47 @@
           link.style.setProperty('color', 'rgba(255,255,255,0.4)', 'important');
         });
       });
+
+      // ── Populate mobile menu nav from desktop nav links ──
+      var mobileNav = document.getElementById('wa-mobile-nav');
+      if (mobileNav && !mobileNav.dataset.waPopulated) {
+        mobileNav.dataset.waPopulated = '1';
+        document.querySelectorAll('.menu-list__link').forEach(function(link) {
+          var a = document.createElement('a');
+          a.href = link.href;
+          a.textContent = link.textContent.trim();
+          a.className = 'wa-mobile-menu__link';
+          mobileNav.appendChild(a);
+        });
+      }
+
+      // ── Hamburger toggle ──
+      var toggle = document.querySelector('.wa-menu-toggle');
+      var mobileMenu = document.getElementById('wa-mobile-menu');
+      if (toggle && mobileMenu && !toggle.dataset.waToggle) {
+        toggle.dataset.waToggle = '1';
+        toggle.addEventListener('click', function() {
+          var isOpen = mobileMenu.classList.toggle('is-open');
+          toggle.classList.toggle('is-open', isOpen);
+          toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        // Close mobile menu on outside click
+        document.addEventListener('click', function(e) {
+          if (!mobileMenu.contains(e.target) && !toggle.contains(e.target)) {
+            mobileMenu.classList.remove('is-open');
+            toggle.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+        // Close mobile menu on resize to desktop
+        window.addEventListener('resize', function() {
+          if (window.innerWidth >= 880) {
+            mobileMenu.classList.remove('is-open');
+            toggle.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
     }
 
     // Run on load and after hydration
