@@ -472,20 +472,7 @@
       }
 
       // ── Nav + Login hover: attach pointer listeners ──
-      document.querySelectorAll('.menu-list__link, .wa-header-login').forEach(function(link) {
-        if (link.dataset.waHover) return;
-        link.dataset.waHover = '1';
-        link.style.setProperty('color', 'rgba(255,255,255,0.4)', 'important');
-        link.style.setProperty('transition', 'color 0.15s ease', 'important');
-        link.addEventListener('mouseenter', function() {
-          link.style.setProperty('color', 'rgba(255,255,255,0.85)', 'important');
-        });
-        link.addEventListener('mouseleave', function() {
-          link.style.setProperty('color', 'rgba(255,255,255,0.4)', 'important');
-        });
-      });
-      // Also target login inside header-actions (may render late)
-      document.querySelectorAll('header-actions a.wa-header-login').forEach(function(link) {
+      document.querySelectorAll('.menu-list__link').forEach(function(link) {
         if (link.dataset.waHover) return;
         link.dataset.waHover = '1';
         link.style.setProperty('color', 'rgba(255,255,255,0.4)', 'important');
