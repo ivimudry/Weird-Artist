@@ -39,6 +39,14 @@ shopify-account {
   display: none !important;
 }
 
+/* Hide default Shopify drawer/hamburger menu */
+.header__drawer,
+.menu-drawer-container,
+.header-drawer-icon,
+#Details-menu-drawer-container {
+  display: none !important;
+}
+
 /* ══════════════════════════════════════════════════════════
    HEADER: Raycast floating pill navbar
    ══════════════════════════════════════════════════════════ */
@@ -464,34 +472,22 @@ a, button, .button {
   transform: translateY(-6px) rotate(45deg);
 }
 
-/* ── Mobile menu dropdown panel ── */
+/* ── Mobile menu panel (inside the pill, expands downward) ── */
 .wa-mobile-menu {
   display: none;
-  position: absolute;
-  top: calc(100%);
-  left: 16px;
-  right: 16px;
-  max-width: 1204px;
-  margin: 8px auto 0;
-  background: linear-gradient(137deg, rgba(17,18,20,.75) 4.87%, rgba(12,13,15,.9) 75.88%);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 16px;
-  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
-  padding: 24px 16px 16px;
   flex-direction: column;
   gap: 2px;
-  z-index: 998;
+  padding: 8px 8px 16px;
+  overflow: hidden;
   pointer-events: auto;
-  animation: wa-menuSlideIn 0.3s ease forwards;
-}
-@keyframes wa-menuSlideIn {
-  0% { opacity: 0; transform: translateY(-8px); }
-  100% { opacity: 1; transform: translateY(0); }
 }
 .wa-mobile-menu.is-open {
   display: flex;
+}
+/* Animate pill height when menu opens */
+#header-component {
+  transition: height 0.3s ease, transform 0.3s ease;
+  overflow: hidden !important;
 }
 .wa-mobile-menu__nav {
   display: flex;
@@ -611,5 +607,21 @@ a, button, .button {
   header-component {
     margin-left: 16px;
     margin-right: 16px;
+  }
+
+  /* When menu is open, pill expands to fill viewport like Raycast */
+  #header-component:has(.wa-mobile-menu.is-open),
+  header-component:has(.wa-mobile-menu.is-open) {
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto !important;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0 !important;
+    padding-bottom: 24px;
+  }
+  /* Fix header group to fill screen when menu open */
+  #header-group:has(.wa-mobile-menu.is-open) {
+    padding: 0;
   }
 }

@@ -397,17 +397,17 @@
       {{ navigation_bar }}
     </div>
   {% endif %}
-</header-component>
 
-<!-- WA: Mobile dropdown menu panel -->
-<div class="wa-mobile-menu" id="wa-mobile-menu">
-  <nav class="wa-mobile-menu__nav" id="wa-mobile-nav"></nav>
-  <div class="wa-mobile-menu__divider"></div>
-  <div class="wa-mobile-menu__actions">
-    <a href="/account/login" class="wa-mobile-menu__link">Log in</a>
-    <a href="/pages/contact" class="wa-mobile-menu__cta">Get in touch</a>
+  <!-- WA: Mobile menu panel (inside the pill, expands downward) -->
+  <div class="wa-mobile-menu" id="wa-mobile-menu">
+    <nav class="wa-mobile-menu__nav" id="wa-mobile-nav"></nav>
+    <div class="wa-mobile-menu__divider"></div>
+    <div class="wa-mobile-menu__actions">
+      <a href="/account/login" class="wa-mobile-menu__link">Log in</a>
+      <a href="/pages/contact" class="wa-mobile-menu__cta">Get in touch</a>
+    </div>
   </div>
-</div>
+</header-component>
 
 {% style %}
   /* WA: Force glass blur — injected via inline style block to bypass stylesheet cache */
