@@ -63,6 +63,17 @@ shopify-account {
   -webkit-backdrop-filter: none !important;
   padding: 0;
   pointer-events: none;
+  display: block !important;
+}
+
+/* Header section wrapper — must not push page content */
+.header-section {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  pointer-events: none;
 }
 
 /* The header component itself — the pill */
