@@ -425,17 +425,6 @@ header-component[sticky] {
   z-index: 0;
 }
 
-/* Background gradient vignette — bottom fade only */
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  width: 100%;
-  pointer-events: none;
-  background: linear-gradient(to bottom, transparent 85%, var(--color-background, #0a0a0f) 100%);
-}
-
 /* Content wrapper — centered with Raycast padding */
 .hero .hero__content-wrapper,
 .hero .section-content-wrapper {
