@@ -76,11 +76,6 @@ shopify-account {
   pointer-events: none;
 }
 
-/* Space below fixed header — applied to the first heading text */
-.shopify-section:first-of-type .text-block:first-child {
-  padding-top: 110px !important;
-}
-
 /* The header component itself — the pill */
 #header-component,
 header-component {
@@ -394,11 +389,143 @@ header-component[sticky] {
 }
 
 /* ══════════════════════════════════════════════════════════
-   HERO: Clean dark background
+   HERO: Raycast-style hero banner
    ══════════════════════════════════════════════════════════ */
 
+/* Fade-in-up animation */
+@keyframes wa-fade-in-up {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Main hero container */
 .hero {
-  background-color: var(--color-background) !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: var(--color-background, #07080a) !important;
+  overflow: hidden !important;
+}
+
+/* Background gradient vignette (Raycast edge fade) */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  pointer-events: none;
+  background:
+    linear-gradient(to bottom, #07080a20 0%, #07080a20 90%, var(--color-background, #07080a) 100%) 100% 100% / 100% 100% no-repeat,
+    linear-gradient(to left, #07080a00 0%, var(--color-background, #07080a) 100%) 0 0 / 5% 100% no-repeat,
+    linear-gradient(to right, #07080a00 0%, var(--color-background, #07080a) 100%) 100% 0 / 5% 100% no-repeat;
+}
+
+/* Content wrapper — centered with Raycast padding */
+.hero .hero__content-wrapper,
+.hero .section-content-wrapper {
+  position: relative !important;
+  z-index: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 32px !important;
+  align-items: center !important;
+  max-width: 818px !important;
+  margin: 0 auto !important;
+  padding: 260px 16px 137px !important;
+  opacity: 0;
+  animation: wa-fade-in-up 1s ease forwards;
+}
+
+/* Hero heading (h1 text block) */
+.hero .text-block.h1,
+.hero .text-block:first-child {
+  max-width: 540px !important;
+  font-size: 36px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-feature-settings: "ss08" on, "ss02" on, "liga" off !important;
+  line-height: 110% !important;
+  color: white !important;
+  text-align: center !important;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.15) !important;
+  -webkit-text-fill-color: unset !important;
+  background: none !important;
+  padding-top: 0 !important;
+}
+
+/* Hero paragraph (subtitle text block) */
+.hero .text-block.body,
+.hero .text-block + .text-block {
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: normal !important;
+  color: white !important;
+  text-align: center !important;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) !important;
+  text-wrap: balance !important;
+  letter-spacing: 0.2px !important;
+  -webkit-text-fill-color: unset !important;
+  background: none !important;
+}
+
+/* Hero button */
+.hero .button-block a,
+.hero .button-block button {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 16px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 24px !important;
+  color: var(--color-button-fg, rgb(24, 25, 26)) !important;
+  background: var(--color-button-bg, hsla(0, 0%, 100%, 0.815)) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: background 0.15s ease !important;
+  text-decoration: none !important;
+  opacity: 0;
+  animation: wa-fade-in-up 1s ease 0.15s forwards;
+}
+
+.hero .button-block a:hover,
+.hero .button-block button:hover {
+  background: var(--color-button-bg-hover, hsl(0, 0%, 100%)) !important;
+}
+
+/* Desktop: larger sizes (≥880px) */
+@media (min-width: 880px) {
+  .hero .hero__content-wrapper,
+  .hero .section-content-wrapper {
+    padding: 370px 16px 212px !important;
+  }
+
+  .hero .text-block.h1,
+  .hero .text-block:first-child {
+    font-size: 48px !important;
+  }
+
+  .hero .text-block.body,
+  .hero .text-block + .text-block {
+    font-size: 18px !important;
+  }
+}
+
+/* Large desktop (≥1064px) */
+@media (min-width: 1064px) {
+  .hero .text-block.h1,
+  .hero .text-block:first-child {
+    max-width: 540px !important;
+    font-size: 64px !important;
+  }
 }
 
 /* Gradient glow behind hero heading */
