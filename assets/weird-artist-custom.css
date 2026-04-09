@@ -130,6 +130,10 @@ header-component [class*="color-"] {
 .header__row--top {
   padding: 0 !important;
   margin: 0 !important;
+  border: none !important;
+  border-bottom: none !important;
+  --border-bottom-width: 0px !important;
+  --border-bottom-width-mobile: 0px !important;
 }
 
 /* Kill page-margin padding from .section--full-width-margin */
@@ -436,12 +440,15 @@ header-component[sticky] {
 .hero .hero__content-wrapper,
 .hero .section-content-wrapper {
   position: relative !important;
+  inset: unset !important;
   z-index: 1 !important;
   display: flex !important;
   flex-direction: column !important;
   gap: 32px !important;
   align-items: center !important;
+  justify-content: flex-start !important;
   max-width: 818px !important;
+  width: 100% !important;
   margin: 0 auto !important;
   padding: 80px 16px 60px !important;
   opacity: 0;
