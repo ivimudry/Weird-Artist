@@ -438,6 +438,8 @@ header-component[sticky] {
   padding: 80px 16px 60px;
   opacity: 0;
   animation: wa-fade-in-up 1s ease forwards;
+  /* Prevent transparent header offset from adding padding to child blocks */
+  --section-top-offset: 0px;
 }
 
 /* Hero heading (h1 text block) */
