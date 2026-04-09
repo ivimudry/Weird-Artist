@@ -86,9 +86,9 @@ header-component {
   background: linear-gradient(137deg, rgba(17,18,20,.75) 4.87%, rgba(12,13,15,.9) 75.88%) !important;
   backdrop-filter: blur(5px) !important;
   -webkit-backdrop-filter: blur(5px) !important;
-  border: none !important;
+  border: 1px solid rgba(255,255,255,.06) !important;
   border-radius: 16px !important;
-  box-shadow: none !important;
+  box-shadow: inset 0 1px 1px 0 rgba(255,255,255,.15) !important;
   pointer-events: auto;
   overflow: visible !important;
   font-family: 'Inter', sans-serif !important;
@@ -108,9 +108,9 @@ header-component[data-sticky-state="active"] {
   background: linear-gradient(137deg, rgba(17,18,20,.75) 4.87%, rgba(12,13,15,.9) 75.88%) !important;
   backdrop-filter: blur(5px) !important;
   -webkit-backdrop-filter: blur(5px) !important;
-  border: none !important;
+  border: 1px solid rgba(255,255,255,.06) !important;
   border-radius: 16px !important;
-  box-shadow: none !important;
+  box-shadow: inset 0 1px 1px 0 rgba(255,255,255,.15) !important;
 }
 
 /* Header row — remove extra backgrounds and page-margin padding */
@@ -425,20 +425,15 @@ header-component[sticky] {
   z-index: 0;
 }
 
-/* Background gradient vignette (Raycast edge fade) */
+/* Background gradient vignette — bottom fade only */
 .hero::after {
   content: '';
   position: absolute;
   inset: 0;
   z-index: 0;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   pointer-events: none;
-  background:
-    linear-gradient(to bottom, #07080a20 0%, #07080a20 90%, var(--color-background, #07080a) 100%) 100% 100% / 100% 100% no-repeat,
-    linear-gradient(to left, #07080a00 0%, var(--color-background, #07080a) 100%) 0 0 / 5% 100% no-repeat,
-    linear-gradient(to right, #07080a00 0%, var(--color-background, #07080a) 100%) 100% 0 / 5% 100% no-repeat;
+  background: linear-gradient(to bottom, transparent 85%, var(--color-background, #0a0a0f) 100%);
 }
 
 /* Content wrapper — centered with Raycast padding */
