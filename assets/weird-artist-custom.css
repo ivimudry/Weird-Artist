@@ -76,11 +76,9 @@ shopify-account {
   pointer-events: none;
 }
 
-/* Push page content below the fixed header */
-main,
-#MainContent,
-.main-content,
-#main {
+/* Space below fixed header — applied to first visible section */
+.hero,
+.shopify-section:first-of-type {
   padding-top: 110px !important;
 }
 
