@@ -442,6 +442,11 @@ header-component[sticky] {
   --section-top-offset: 0px;
 }
 
+/* Zero out transparent header offset padding on all hero blocks */
+.hero .hero__content-wrapper .spacing-style {
+  padding-block: 0 !important;
+}
+
 /* Hero heading (h1 text block) */
 .hero .text-block.h1,
 .hero .text-block:first-child {
@@ -456,7 +461,6 @@ header-component[sticky] {
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.15) !important;
   -webkit-text-fill-color: unset !important;
   background: none !important;
-  padding-top: 0 !important;
 }
 
 /* Hero paragraph (subtitle text block) */
