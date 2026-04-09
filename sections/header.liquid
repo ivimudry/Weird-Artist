@@ -507,6 +507,7 @@
           var isOpen = mobileMenu.classList.toggle('is-open');
           toggle.classList.toggle('is-open', isOpen);
           toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          document.body.style.overflow = isOpen ? 'hidden' : '';
         });
         // Close mobile menu on outside click
         document.addEventListener('click', function(e) {
@@ -514,6 +515,7 @@
             mobileMenu.classList.remove('is-open');
             toggle.classList.remove('is-open');
             toggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
           }
         });
         // Close mobile menu on resize to desktop
@@ -522,6 +524,7 @@
             mobileMenu.classList.remove('is-open');
             toggle.classList.remove('is-open');
             toggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
           }
         });
       }

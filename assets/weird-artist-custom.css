@@ -505,11 +505,6 @@ a, button, .button {
 .wa-mobile-menu.is-open {
   display: flex;
 }
-/* Animate pill height when menu opens */
-#header-component {
-  transition: height 0.3s ease, transform 0.3s ease;
-  overflow: hidden !important;
-}
 .wa-mobile-menu__nav {
   display: flex;
   flex-direction: column;
