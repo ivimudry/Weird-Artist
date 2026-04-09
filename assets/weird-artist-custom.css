@@ -443,7 +443,7 @@ header-component[sticky] {
   align-items: center !important;
   max-width: 818px !important;
   margin: 0 auto !important;
-  padding: 180px 16px 80px !important;
+  padding: 80px 16px 60px !important;
   opacity: 0;
   animation: wa-fade-in-up 1s ease forwards;
 }
