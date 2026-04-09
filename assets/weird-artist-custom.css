@@ -608,20 +608,4 @@ a, button, .button {
     margin-left: 16px;
     margin-right: 16px;
   }
-
-  /* When menu is open, pill expands to fill viewport like Raycast */
-  #header-component:has(.wa-mobile-menu.is-open),
-  header-component:has(.wa-mobile-menu.is-open) {
-    min-height: 100vh;
-    max-height: 100vh;
-    overflow-y: auto !important;
-    margin-left: 0;
-    margin-right: 0;
-    border-radius: 0 !important;
-    padding-bottom: 24px;
-  }
-  /* Fix header group to fill screen when menu open */
-  #header-group:has(.wa-mobile-menu.is-open) {
-    padding: 0;
-  }
 }
