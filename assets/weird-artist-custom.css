@@ -409,6 +409,22 @@ header-component[sticky] {
   overflow: hidden !important;
 }
 
+/* Wave lines background image */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  background: url('hero-waves.png') center center / contain no-repeat;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
 /* Background gradient vignette (Raycast edge fade) */
 .hero::after {
   content: '';

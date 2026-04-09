@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1000" width="1920" height="1000">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bg-streak" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9D7F8" stop-opacity="0.85"/>
+      <stop offset="30%" stop-color="#DB83EA" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#7E79E5" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#20A5EC" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="bg-streak-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8A4E6" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#9B7AE8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#6382F0" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="bg-streak-3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DB83EA" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#20A5EC" stop-opacity="0.3"/>
+    </linearGradient>
+
+    <!-- Icon card glass background -->
+    <linearGradient id="card-glass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <!-- Icon accent gradients -->
+    <linearGradient id="icon-pink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9D7F8"/>
+      <stop offset="100%" stop-color="#DB83EA"/>
+    </linearGradient>
+    <linearGradient id="icon-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DB83EA"/>
+      <stop offset="100%" stop-color="#7E79E5"/>
+    </linearGradient>
+    <linearGradient id="icon-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7E79E5"/>
+      <stop offset="100%" stop-color="#20A5EC"/>
+    </linearGradient>
+    <linearGradient id="icon-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6382F0"/>
+      <stop offset="100%" stop-color="#20A5EC"/>
+    </linearGradient>
+    <linearGradient id="icon-warm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9D7F8"/>
+      <stop offset="100%" stop-color="#7E79E5"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="g" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="16" result="b"/>
+      <feComposite in="SourceGraphic" in2="b" operator="over"/>
+    </filter>
+    <filter id="sg" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="25"/>
+    </filter>
+    <filter id="blur-edge" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6"/>
+    </filter>
+    <filter id="card-shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+
+    <!-- Radial vignette -->
+    <radialGradient id="vig" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#07080a" stop-opacity="0"/>
+      <stop offset="65%" stop-color="#07080a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#07080a" stop-opacity="0.9"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Black BG -->
+  <rect width="1920" height="1000" fill="#07080a"/>
+
+  <!-- Background streaks -->
+  <g transform="rotate(-35 960 500)" opacity="0.7">
+    <rect x="350" y="-300" width="55" height="1800" rx="28" fill="url(#bg-streak)" opacity="0.6" filter="url(#g)"/>
+    <rect x="440" y="-260" width="65" height="1780" rx="33" fill="url(#bg-streak)" opacity="0.7" filter="url(#g)"/>
+    <rect x="540" y="-240" width="72" height="1760" rx="36" fill="url(#bg-streak)" opacity="0.8" filter="url(#g)"/>
+    <rect x="648" y="-220" width="78" height="1740" rx="39" fill="url(#bg-streak)" opacity="0.85" filter="url(#g)"/>
+    <rect x="762" y="-230" width="68" height="1750" rx="34" fill="url(#bg-streak-2)" opacity="0.75" filter="url(#g)"/>
+    <rect x="862" y="-250" width="58" height="1770" rx="29" fill="url(#bg-streak-3)" opacity="0.6" filter="url(#g)"/>
+    <rect x="948" y="-270" width="48" height="1780" rx="24" fill="url(#bg-streak-3)" opacity="0.45" filter="url(#g)"/>
+  </g>
+
+  <!-- Vignette overlay -->
+  <rect width="1920" height="1000" fill="url(#vig)"/>
+
+  <!-- ═══ ICON ROW 1 (top, 5 icons) ═══ -->
+
+  <!-- Icon 1: SHIELD / Privacy — left edge, blurred -->
+  <g transform="translate(348, 310)" filter="url(#blur-edge)" opacity="0.5">
+    <rect width="120" height="120" rx="26" fill="url(#card-glass)" stroke="url(#card-border)" stroke-width="1"/>
+    <!-- Shield icon -->
+    <g transform="translate(30, 22)">
+      <path d="M30 4 L6 16 L6 36 C6 54 16 70 30 76 C44 70 54 54 54 36 L54 16 Z" fill="none" stroke="url(#icon-cyan)" stroke-width="3.5" stroke-linejoin="round" opacity="0.9"/>
+      <path d="M22 40 L28 46 L40 32" fill="none" stroke="url(#icon-cyan)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- Icon 2: PALETTE / Design — left -->
+  <g transform="translate(518, 310)" filter="url(#card-shadow)">
+    <rect width="140" height="140" rx="30" fill="url(#card-glass)" stroke="url(#card-border)" stroke-width="1"/>
+    <!-- Palette icon -->
+    <g transform="translate(30, 30)">
+      <path d="M40 4 C18 4 0 22 0 44 C0 60 8 72 24 76 C30 77 32 72 32 68 C32 62 26 58 26 50 C26 40 34 34 44 34 L52 34 C64 34 76 24 76 12 C76 6 60 4 40 4Z" fill="none" stroke="url(#icon-pink)" stroke-width="3"/>
+      <circle cx="22" cy="24" r="6" fill="#F9D7F8"/>
+      <circle cx="40" cy="16" r="6" fill="#DB83EA"/>
+      <circle cx="58" cy="22" r="6" fill="#7E79E5"/>
+      <circle cx="56" cy="44" r="6" fill="#20A5EC"/>
+    </g>
+  </g>
+
+  <!-- Icon 3: INFINITY / Pay Once — center, largest -->
+  <g transform="translate(708, 290)" filter="url(#card-shadow)">
+    <rect width="160" height="160" rx="34" fill="url(#card-glass)" stroke="url(#card-border)" stroke-width="1.5"/>
+    <!-- Infinity symbol -->
+    <g transform="translate(28, 46)">
+      <path d="M52 34 C52 34 66 12 82 12 C94 12 104 22 104 34 C104 46 94 56 82 56 C66 56 52 34 52 34 C52 34 38 12 22 12 C10 12 0 22 0 34 C0 46 10 56 22 56 C38 56 52 34 52 34Z" fill="none" stroke="url(#icon-purple)" stroke-width="4" stroke-linecap="round"/>
+    </g>
+    <!-- Small "∞" label -->
+    <text x="80" y="138" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="white" opacity="0.3" font-weight="500">forever yours</text>
+  </g>
+
+  <!-- Icon 4: USERS / Small Teams — right -->
+  <g transform="translate(918, 310)" filter="url(#card-shadow)">
+    <rect width="140" height="140" rx="30" fill="url(#card-glass)" stroke="url(#card-border)" stroke-width="1"/>
+    <!-- Team icon (3 people) -->
+    <g transform="translate(26, 28)">
+      <circle cx="44" cy="20" r="12" fill="none" stroke="url(#icon-blue)" stroke-width="3"/>
+      <path d="M22 72 C22 54 32 42 44 42 C56 42 66 54 66 72" fill="none" stroke="url(#icon-blue)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="16" cy="28" r="9" fill="none" stroke="url(#icon-blue)" stroke-width="2.5" opacity="0.5"/>
+      <path d="M0 66 C0 52 8 44 16 44" fill="none" stroke="url(#icon-blue)" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+      <circle cx="72" cy="28" r="9" fill="none" stroke="url(#icon-blue)" stroke-width="2.5" opacity="0.5"/>
+      <path d="M88 66 C88 52 80 44 72 44" fill="none" stroke="url(#icon-blue)" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- Icon 5: SPARKLE / Beautiful UI — right edge, blurred -->
+  <g transform="translate(1108, 310)" filter="url(#blur-edge)" opacity="0.5">
+    <rect width="120" height="120" rx="26" fill="url(#card-glass)" stroke="url(#card-border)" stroke-width="1"/>
+    <!-- Sparkle icon -->
+    <g transform="translate(30, 22)">
+      <path d="M30 0 L36 22 L60 28 L36 34 L30 56 L24 34 L0 28 L24 22 Z" fill="url(#icon-warm)" opacity="0.85"/>
+      <path d="M48 4 L50 12 L58 14 L50 16 L48 24 L46 16 L38 14 L46 12 Z" fill="url(#icon-warm)" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- ═══ ICON ROW 2 (bottom, 4 icons) ═══ -->
+
+  <!-- Icon 6: LOCK / Local Data — lower left, blurred -->
+  <g transform="translate(448, 500)" filter="url(#blur-edge)" opacity="0.45">
+    <rect width="120" height="120" rx="26" fill="url(#card-glass)" stroke="url(#card-border)" stroke-width="1"/>
+    <!-- Lock icon -->
+    <g transform="translate(34, 20)">
+      <rect x="4" y="32" width="44" height="36" rx="6" fill="none" stroke="url(#icon-purple)" stroke-width="3"/>
+      <path d="M14 32 L14 20 C14 10 20 4 26 4 C32 4 38 10 38 20 L38 32" fill="none" stroke="url(#icon-purple)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="26" cy="50" r="5" fill="url(#icon-purple)"/>
+    </g>
+  </g>
+
+  <!-- Icon 7: TERMINAL / Pro Tools -->
+  <g transform="translate(618, 500)" filter="url(#card-shadow)">
+    <rect width="140" height="140" rx="30" fill="url(#card-glass)" stroke="url(#card-border)" stroke-width="1"/>
+    <!-- Terminal icon -->
+    <g transform="translate(30, 32)">
+      <rect x="0" y="0" width="80" height="58" rx="8" fill="none" stroke="url(#icon-cyan)" stroke-width="3"/>
+      <path d="M16 20 L30 30 L16 40" fill="none" stroke="url(#icon-cyan)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="38" y1="40" x2="56" y2="40" stroke="url(#icon-cyan)" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Icon 8: HEART / Indie Spirit -->
+  <g transform="translate(808, 500)" filter="url(#card-shadow)">
+    <rect width="140" height="140" rx="30" fill="url(#card-glass)" stroke="url(#card-border)" stroke-width="1"/>
+    <!-- Heart with code brackets -->
+    <g transform="translate(22, 30)">
+      <path d="M48 76 L16 48 C4 36 4 18 16 10 C28 2 40 10 48 22 C56 10 68 2 80 10 C92 18 92 36 80 48 Z" fill="none" stroke="url(#icon-pink)" stroke-width="3" stroke-linejoin="round"/>
+      <text x="48" y="50" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="18" fill="url(#icon-pink)" font-weight="600" opacity="0.7">&lt;/&gt;</text>
+    </g>
+  </g>
+
+  <!-- Icon 9: BOLT / Performance — lower right, blurred -->
+  <g transform="translate(998, 500)" filter="url(#blur-edge)" opacity="0.45">
+    <rect width="120" height="120" rx="26" fill="url(#card-glass)" stroke="url(#card-border)" stroke-width="1"/>
+    <!-- Lightning bolt -->
+    <g transform="translate(36, 18)">
+      <path d="M28 0 L8 36 L22 36 L18 68 L44 28 L30 28 Z" fill="url(#icon-warm)" opacity="0.85"/>
+    </g>
+  </g>
+</svg>
