@@ -498,8 +498,7 @@
   {% endcomment %}
 
   <div
-    class="hero__container spacing-style section section--full-width"
-    style="{% render 'spacing-style', settings: section.settings %}"
+    class="hero__container section section--full-width"
   >
     {%- if section.settings.link != blank -%}
       <a
@@ -525,14 +524,11 @@
     <div
       class="
         hero__content-wrapper
-        layout-panel-flex
-        layout-panel-flex--{{ section.settings.content_direction }}
         {% if section.settings.vertical_on_mobile %}mobile-column{% endif %}
         section-content-wrapper
         {{section.settings.section_width}}
         {% if request.design_mode %}hero__content-wrapper--design-mode{% endif %}
       "
-      style="{% render 'layout-panel-style', settings: section.settings %}"
     >
       {% content_for 'blocks' %}
     </div>
