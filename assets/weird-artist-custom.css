@@ -409,6 +409,13 @@ header-component[sticky] {
   overflow: hidden !important;
 }
 
+.hero .hero__container.spacing-style {
+  --padding-block-start: 40px !important;
+  --padding-block-end: 40px !important;
+  padding-block-start: 40px !important;
+  padding-block-end: 40px !important;
+}
+
 /* Wave lines background image */
 .hero::before {
   content: '';
