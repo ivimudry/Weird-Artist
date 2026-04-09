@@ -140,7 +140,7 @@ header-component [class*="color-"] {
   gap: 0 !important;
   grid-gap: 0 !important;
   column-gap: 0 !important;
-  min-height: 58px !important;
+  min-height: 76px !important;
   --section-padding-inline: 0px;
   --gap-xl: 0px;
 }
