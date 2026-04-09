@@ -128,12 +128,8 @@ header-component [class*="color-"] {
 }
 
 .header__row--top {
-  padding: 0 !important;
-  margin: 0 !important;
-  border: none !important;
-  border-bottom: none !important;
-  --border-bottom-width: 0px !important;
-  --border-bottom-width-mobile: 0px !important;
+  padding: 0;
+  margin: 0;
 }
 
 /* Kill page-margin padding from .section--full-width-margin */
@@ -404,20 +400,13 @@ header-component[sticky] {
 
 /* Main hero container */
 .hero {
-  position: relative !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  background-color: var(--color-background, #07080a) !important;
-  overflow: hidden !important;
-}
-
-.hero .hero__container.spacing-style {
-  --padding-block-start: 40px !important;
-  --padding-block-end: 40px !important;
-  padding-block-start: 40px !important;
-  padding-block-end: 40px !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--color-background, #07080a);
+  overflow: hidden;
 }
 
 /* Wave lines background image */
@@ -439,18 +428,16 @@ header-component[sticky] {
 /* Content wrapper — centered with Raycast padding */
 .hero .hero__content-wrapper,
 .hero .section-content-wrapper {
-  position: relative !important;
-  inset: unset !important;
-  z-index: 1 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 32px !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  max-width: 818px !important;
-  width: 100% !important;
-  margin: 0 auto !important;
-  padding: 80px 16px 60px !important;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  max-width: 818px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 16px 60px;
   opacity: 0;
   animation: wa-fade-in-up 1s ease forwards;
 }
