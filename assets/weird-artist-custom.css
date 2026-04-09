@@ -404,7 +404,7 @@ header-component[sticky] {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: flex-start !important;
   background-color: var(--color-background, #07080a) !important;
   overflow: hidden !important;
 }
@@ -436,7 +436,7 @@ header-component[sticky] {
   align-items: center !important;
   max-width: 818px !important;
   margin: 0 auto !important;
-  padding: 260px 16px 137px !important;
+  padding: 180px 16px 80px !important;
   opacity: 0;
   animation: wa-fade-in-up 1s ease forwards;
 }
