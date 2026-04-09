@@ -76,11 +76,21 @@ shopify-account {
   pointer-events: none;
 }
 
+/* Push page content below the fixed header */
+main,
+#MainContent,
+.main-content,
+#main {
+  padding-top: 110px !important;
+}
+
 /* The header component itself — the pill */
 #header-component,
 header-component {
   max-width: 1204px;
   margin: 16px auto 0;
+  margin-left: max(16px, calc((100% - 1204px) / 2));
+  margin-right: max(16px, calc((100% - 1204px) / 2));
   background: linear-gradient(137deg, rgba(17,18,20,.75) 4.87%, rgba(12,13,15,.9) 75.88%) !important;
   backdrop-filter: blur(5px) !important;
   -webkit-backdrop-filter: blur(5px) !important;
@@ -612,11 +622,5 @@ a, button, .button {
   /* Header group mobile padding */
   #header-group {
     padding: 8px 0 0;
-  }
-
-  #header-component,
-  header-component {
-    margin-left: 16px;
-    margin-right: 16px;
   }
 }
