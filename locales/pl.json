@@ -362,5 +362,181 @@
       "default_title": "Tytuł domyślny",
       "sticky_add_to_cart": "Pasek szybkiego dodawania do koszyka"
     }
+  },
+  "wa": {
+    "tools_hub":  {
+                      "title_a":  "Wybierz swój",
+                      "crm_count":  "1 narzędzie · 1 w alpha",
+                      "crm_desc":  "Edytory maili, helpery do segmentacji, eksportery kampanii — dla tych, którzy naprawdę naciskają Wyślij.",
+                      "fin_desc":  "Lokalne analizatory P/L, crunchery CSV z giełd, journale tradingowe — dla traderów, którzy nie chcą, żeby broker wiedział.",
+                      "fin_title":  "Finanse i trading",
+                      "title_b":  "warsztat.",
+                      "crm_title":  "CRM i marketing",
+                      "fin_count":  "1 narzędzie · planowane Q3",
+                      "view_tools":  "Zobacz narzędzia",
+                      "foot_link":  "Powiedz nam, czego brakuje.",
+                      "eyebrow":  "Dwa światy · jeden warsztat",
+                      "lede":  "Dwie kategorie. Obie desktopowe. Obie pay-once. Obie wychodzą w 2026.",
+                      "foot":  "Chcesz trzecią kategorię? "
+                  },
+    "pg":  {
+               "title_a":  "Edytuj kampanie masowo",
+               "f5":  "Archiwum ZIP projektu · pełny log zmian · UI po ukraińsku",
+               "cta_more":  "Zobacz kategorię",
+               "f2":  "Dwukierunkowy sync z Customer.io (US i EU)",
+               "cta_alpha":  "Poproś o dostęp alpha",
+               "desc":  "WYSIWYG i CodeMirror obok siebie. Pull i push do Customer.io US/EU. Cały projekt w ZIP. Wersjonowanie lokalnie — bez chmury, bez telemetrii, bez opłaty per stanowisko.",
+               "f1":  "Wieloprojektowy storage z deep-copy i operacjami masowymi",
+               "title_b":  "na własnej maszynie.",
+               "f4":  "Edycja wielojęzyczna: maile, push, in-app, ankiety",
+               "badge":  "Zamknięta alpha",
+               "f3":  "Tryb WYSIWYG + HTML z podświetlaniem składni",
+               "eyebrow":  "PromptGrid · warsztat CRM",
+               "lede":  "Desktopowy warsztat dla marketerów wysyłających setki maili, pushów, in-app i ankiet w wielu językach — bez opłaty per stanowisko i bez powierzania chmurowemu edytorowi.",
+               "tag":  "Masowy edytor maili HTML i pushów dla operatorów Customer.io."
+           },
+    "about":  {
+                  "eyebrow":  "O nas · założone 2026",
+                  "title_b":  "Raz.",
+                  "lede":  "Gdzieś po drodze software pożarł świat — a potem zaczął pobierać czynsz za ślady ugryzień. Każdy workflow zamienił się w subskrypcję. Każde narzędzie stało się lokatorem twojego konta bankowego. Każdy operator, marketer i trader zaczął płacić 9, 29, 99 € miesięcznie za przywilej wykonywania własnej pracy. Uważamy, że to dziwne.",
+                  "title_a":  "Software, który kupujesz."
+              },
+    "form":  {
+                 "message":  "Wiadomość",
+                 "cat_finance":  "Finanse i trading",
+                 "request_hint":  "Bez NDA. Bez pustych słów. Opisz co zaoszczędziłoby ci najwięcej czasu.",
+                 "cat_other":  "Produktywność / Inne",
+                 "request_placeholder":  "Im krócej i dziwniej, tym lepiej.",
+                 "category":  "Kategoria",
+                 "subject_placeholder":  "Zwrot · partnerstwo · bug · inne",
+                 "request_what":  "Jakie narzędzie chciałbyś żeby istniało?",
+                 "name":  "Twoje imię",
+                 "subject":  "Temat",
+                 "cat_crm":  "CRM i marketing",
+                 "email":  "Email"
+             },
+    "showcase":  {
+                     "eyebrow":  "Aktualnie dostępne"
+                 },
+    "tagline":  "Kupione raz. Twoje na zawsze.",
+    "cta":  {
+                "read_manifesto":  "Przeczytaj manifest",
+                "send_message":  "Wyślij",
+                "browse_tools":  "Zobacz narzędzia",
+                "get_a_tool":  "Kup narzędzie",
+                "send_request":  "Wyślij zapytanie"
+            },
+    "notfound":  {
+                     "shortcut_contact_key":  "Porozmawiaj",
+                     "title_a":  "Ta strona",
+                     "lede":  "Link jest błędny, strona została usunięta, albo nigdy jej nie zbudowaliśmy. Tak czy inaczej — wracajmy do czegoś użytecznego.",
+                     "eyebrow":  "Zgubiłeś się w warsztacie",
+                     "shortcut_about_key":  "Czytaj",
+                     "shortcut_request_key":  "Zapytaj",
+                     "shortcut_tools_key":  "Przeglądaj",
+                     "cta_home":  "Na stronę główną",
+                     "title_b":  "nigdy nie została wydana.",
+                     "cta_contact":  "Powiedz nam, co się zepsuło"
+                 },
+    "terms":  {
+                  "eyebrow":  "Prawne · Regulamin",
+                  "title_b":  "na zawsze.",
+                  "lede":  "Po ludzku: płacisz raz, dostajesz wieczystą licencję na używanie aplikacji na swoich maszynach, zostajesz z tym co kupiłeś nawet jeśli znikniemy. Bez subskrypcji, bez auto-przedłużania, bez niespodziewanych blokad. Dłuższa wersja niżej.",
+                  "title_a":  "Kupujesz raz. Twoje"
+              },
+    "hero":  {
+                 "eyebrow":  "Weird Artist · założone 2026",
+                 "title_b":  "Raz.",
+                 "subtitle":  "Weird Artist tworzy narzędzia desktopowe dla marketerów, traderów i operatorów, którzy odmawiają wynajmowania własnego workflow.",
+                 "title_a":  "Software, który kupujesz."
+             },
+    "cat":  {
+                "crm_title_b":  "naciskają Wyślij.",
+                "crm_eyebrow":  "Kategoria · CRM i marketing",
+                "alpha":  "Zamknięta alpha",
+                "fin_ba_tag":  "Lokalny analizator P/L dla Binance Spot, Futures USD-M i COIN-M.",
+                "crm_pg_f5":  "Archiwum ZIP projektu · pełny log zmian · UI po ukraińsku",
+                "crm_pg_desc":  "Desktopowy warsztat CRM dla marketerów prowadzących setki kampanii w różnych regionach i językach. WYSIWYG i CodeMirror obok siebie. Pull i push do Customer.io US/EU. Cały projekt w ZIP. Wersjonowanie lokalnie — bez chmury, bez telemetrii, bez opłaty per stanowisko.",
+                "fin_showcase_a":  "Jedno narzędzie",
+                "fin_ba_f3":  "Funding, prowizje i rabaty liczone osobno",
+                "crm_pg_f4":  "Edycja wielojęzyczna: maile, push, in-app, ankiety",
+                "fin_ba_f5":  "Agregacja wielu kont z filtrami per portfel",
+                "cta_waitlist":  "Lista oczekujących",
+                "workshop":  "W warsztacie",
+                "crm_lede":  "Desktopowe narzędzia dla marketerów i operatorów CRM zmęczonych płaceniem 99 $/miesiąc za kopiowanie tego samego maila do tego samego dashboardu. Edytory masowe, eksportery, dwukierunkowe synki — local-first.",
+                "back":  "Wróć do kategorii",
+                "fin_title_a":  "Dla traderów, którzy nie chcą,",
+                "fin_ba_f1":  "Importy: Spot · Futures USD-M · Futures COIN-M",
+                "crm_pg_f2":  "Dwukierunkowy sync z Customer.io (US i EU)",
+                "cta_alpha":  "Poproś o dostęp alpha",
+                "cta_manifesto":  "Przeczytaj manifest",
+                "fin_ba_f2":  "P/L na symbol i na miesiąc",
+                "crm_title_a":  "Dla tych, którzy naprawdę",
+                "crm_pg_f1":  "Wieloprojektowy storage z deep-copy i operacjami masowymi",
+                "fin_lede":  "Lokalne analizatory i journale dla krypto, futures i spotu. CSV przetwarzasz na swojej maszynie. Twoje liczby nie opuszczają biurka.",
+                "crm_showcase_b":  "w alphie.",
+                "coming":  "Q3 2026",
+                "fin_eyebrow":  "Kategoria · Finanse i trading",
+                "crm_pg_f3":  "Tryb WYSIWYG + HTML z podświetlaniem składni",
+                "fin_title_b":  "żeby broker widział.",
+                "crm_pg_tag":  "Masowy edytor maili HTML i pushów dla operatorów Customer.io.",
+                "fin_ba_f4":  "CSV in, CSV out — bez API key, bez chmury",
+                "crm_showcase_a":  "Jedno narzędzie",
+                "fin_showcase_b":  "wychodzi w 2026.",
+                "fin_ba_desc":  "Desktopowy journal, który czyta surowe eksporty CSV z Binance i zamienia je w uczciwy widok P/L: zrealizowany, niezrealizowany, prowizje, funding, na symbol, na miesiąc. Tylko pliki lokalne — twoja historia transakcji zostaje na dysku."
+            },
+    "language_label":  "Język",
+    "contact":  {
+                    "eyebrow":  "Napisz do nas",
+                    "request_success_title":  "Dzięki. Mamy.",
+                    "title_b":  "list.",
+                    "reply_main":  "Odpowiadamy pn–pt w ciągu 2 dni roboczych. Jedna prawdziwa osoba, nie kolejka.",
+                    "direct_lines":  "Bezpośrednie kanały",
+                    "label_support":  "Wsparcie",
+                    "label_hello":  "Cześć",
+                    "success_body":  "Odezwiemy się w ciągu dwóch dni roboczych.",
+                    "error_title":  "Nie udało się wysłać:",
+                    "tab_message":  "Wyślij wiadomość",
+                    "title_a":  "Napisz nam",
+                    "reply_mute":  "Wszystkie zapytania o narzędzia czytamy, ale odpowiadamy tylko jeśli budujemy lub potrzebujemy wyjaśnień.",
+                    "success_title":  "Wiadomość otrzymana.",
+                    "tab_request":  "Zapytaj o narzędzie",
+                    "message_intro":  "Zwroty, partnerstwa, bugi, albo żeby nam powiedzieć, że napisaliśmy manifest źle — pisz.",
+                    "request_intro":  "Roadmapa jest otwarta. Powiedz nam co chciałbyś zobaczyć — jaki arkusz wciąż łatasz taśmą klejącą, jaki SaaS wciąż anulujesz i odnawiasz, jaki raport robisz ręcznie w każdy poniedziałek. Jeśli 10 osób poprosi o to samo — zbudujemy. Jeśli jesteś sam i to sprytne — i tak zbudujemy.",
+                    "request_success_body":  "Czytamy każde zapytanie. Jeśli twoje pasuje do warsztatu, odezwiemy się.",
+                    "label_refund":  "Zwrot",
+                    "reply_window":  "Czas odpowiedzi",
+                    "lede":  "Każdą wiadomość czyta jedna osoba i odpowiada w ciągu dwóch dni roboczych. Żadnego systemu zgłoszeń. Żadnego bota pierwszej linii. Żadnego „twoja sprawa jest dla nas ważna\". Wybierz kanał poniżej — albo wyślij zapytanie o narzędzie bezpośrednio z formularza."
+                },
+    "nav":  {
+                "tools":  "Narzędzia",
+                "request":  "Zapytanie",
+                "contact":  "Kontakt",
+                "about":  "O nas"
+            },
+    "privacy":  {
+                    "eyebrow":  "Prawne · Prywatność",
+                    "title_b":  "na twoim dysku.",
+                    "lede":  "Krótka wersja: nasze narzędzia desktopowe nie dzwonią do domu. Zbieramy minimum potrzebne by sprzedać ci licencję, wysłać link do pobrania i zwrócić pieniądze jeśli poprosisz. Tyle.",
+                    "title_a":  "Twoje dane zostają"
+                },
+    "footer":  {
+                   "privacy":  "Prywatność",
+                   "products":  "Produkty",
+                   "blurb":  "Pay-once narzędzia desktopowe dla ludzi, którzy faktycznie wykonują pracę.",
+                   "request_a_tool":  "Zapytanie o narzędzie",
+                   "legal":  "Prawne",
+                   "company":  "Firma",
+                   "terms":  "Regulamin",
+                   "all_tools":  "Wszystkie narzędzia",
+                   "refund":  "Zwroty",
+                   "upcoming":  "Wkrótce"
+               },
+    "refund":  {
+                   "eyebrow":  "Prawne · Zwrot",
+                   "title_b":  "Bez pytań.",
+                   "lede":  "Jeśli narzędzie nie pasuje do twojego workflow, nie robi tego co obiecała strona, albo po prostu zmieniłeś zdanie — napisz do nas w ciągu 30 dni od zakupu, a zwrócimy pełną kwotę. Żadnych formularzy. Żadnego exit interview. Żadnego popupa „czy na pewno?\".",
+                   "title_a":  "30 dni."
+               }
   }
 }

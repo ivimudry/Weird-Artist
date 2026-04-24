@@ -367,5 +367,181 @@
       "default_title": "Default Title",
       "sticky_add_to_cart": "Quick add to cart bar"
     }
+  },
+  "wa": {
+    "tools_hub":  {
+                      "title_a":  "Pick your",
+                      "crm_count":  "1 tool · 1 in alpha",
+                      "crm_desc":  "Email builders, segmentation helpers, campaign exporters — for the people who actually press send.",
+                      "fin_desc":  "Local P/L analyzers, exchange CSV crunchers, journal tools — for traders who don\u0026rsquo;t want their broker to know.",
+                      "fin_title":  "Finance \u0026amp; Trading",
+                      "title_b":  "workshop.",
+                      "crm_title":  "CRM \u0026amp; Marketing",
+                      "fin_count":  "1 tool · coming Q3",
+                      "view_tools":  "View tools",
+                      "foot_link":  "Tell us what you wish existed.",
+                      "eyebrow":  "Two universes, one workshop",
+                      "lede":  "Two categories. Both desktop. Both pay-once. Both shipping in 2026.",
+                      "foot":  "Want a third category? "
+                  },
+    "pg":  {
+               "title_a":  "Mass-edit campaigns",
+               "f5":  "Project ZIP archive · full history journal · Ukrainian UI",
+               "cta_more":  "See category",
+               "f2":  "Customer.io two-way sync (US \u0026amp; EU regions)",
+               "cta_alpha":  "Request alpha access",
+               "desc":  "Edit emails, push, in-app and surveys with WYSIWYG and CodeMirror side-by-side. Pull and push to Customer.io US/EU. ZIP an entire project. Version everything locally — no cloud, no telemetry, no per-seat tax.",
+               "f1":  "Multi-project storage with deep copy \u0026amp; bulk ops",
+               "title_b":  "on your own machine.",
+               "f4":  "Locale-aware editing across emails, push, in-app, surveys",
+               "badge":  "Closed alpha",
+               "f3":  "WYSIWYG + HTML mode with syntax highlighting",
+               "eyebrow":  "PromptGrid · CRM workbench",
+               "lede":  "A desktop workbench for marketers who ship hundreds of emails, push, in-app and surveys across locales — without paying per seat or trusting a cloud editor.",
+               "tag":  "Mass HTML email \u0026amp; push editor for Customer.io operators."
+           },
+    "about":  {
+                  "eyebrow":  "About · est. 2026",
+                  "title_b":  "Once.",
+                  "lede":  "Somewhere along the way software ate the world — and then started charging rent on the bite marks. Every workflow turned into a subscription. Every tool became a tenant in your bank account. Every operator, marketer and trader started paying $9, $29, $99 a month for the privilege of doing their own job. We think that is weird.",
+                  "title_a":  "Software you buy."
+              },
+    "form":  {
+                 "message":  "Message",
+                 "cat_finance":  "Finance \u0026 Trading",
+                 "request_hint":  "No NDAs. No fluff. Just describe what would save you the most time.",
+                 "cat_other":  "Productivity / Other",
+                 "request_placeholder":  "The shorter and weirder, the better.",
+                 "category":  "Category",
+                 "subject_placeholder":  "Refund · partnership · bug · other",
+                 "request_what":  "What tool do you wish existed?",
+                 "name":  "Your name",
+                 "subject":  "Subject",
+                 "cat_crm":  "CRM \u0026 Marketing",
+                 "email":  "Email"
+             },
+    "showcase":  {
+                     "eyebrow":  "Currently shipping"
+                 },
+    "tagline":  "Built once. Yours forever.",
+    "cta":  {
+                "read_manifesto":  "Read the manifesto",
+                "send_message":  "Send message",
+                "browse_tools":  "Browse tools",
+                "get_a_tool":  "Get a tool",
+                "send_request":  "Send request"
+            },
+    "notfound":  {
+                     "shortcut_contact_key":  "Talk",
+                     "title_a":  "This page",
+                     "lede":  "The link is wrong, the page was deleted, or we never built it. Either way — let\u0026rsquo;s get you back to something useful.",
+                     "eyebrow":  "Lost in the workshop",
+                     "shortcut_about_key":  "Read",
+                     "shortcut_request_key":  "Ask",
+                     "shortcut_tools_key":  "Browse",
+                     "cta_home":  "Back to home",
+                     "title_b":  "never shipped.",
+                     "cta_contact":  "Tell us what broke"
+                 },
+    "terms":  {
+                  "eyebrow":  "Legal · Terms",
+                  "title_b":  "forever.",
+                  "lede":  "Plain-English version: you pay once, you get a perpetual license to use the app on your machines, you keep what you bought even if we disappear. No subscription, no auto-renewal, no surprise lockouts. The longer version is below.",
+                  "title_a":  "Buy once. Yours"
+              },
+    "hero":  {
+                 "eyebrow":  "Weird Artist · est. 2026",
+                 "title_b":  "Once.",
+                 "subtitle":  "Weird Artist makes desktop tools for marketers, traders, and operators who refuse to rent their workflow.",
+                 "title_a":  "Software you buy."
+             },
+    "cat":  {
+                "crm_title_b":  "press send.",
+                "crm_eyebrow":  "Category · CRM \u0026amp; Marketing",
+                "alpha":  "Closed alpha",
+                "fin_ba_tag":  "Local P/L analyzer for Binance Spot, Futures USD-M and COIN-M.",
+                "crm_pg_f5":  "Project ZIP archive · full history journal · Ukrainian UI",
+                "crm_pg_desc":  "A desktop CRM workbench for marketers who run hundreds of campaigns across regions and locales. Edit emails, push, in-app and surveys with WYSIWYG and CodeMirror side-by-side. Pull and push to Customer.io US/EU. ZIP an entire project. Version everything locally — no cloud, no telemetry, no per-seat tax.",
+                "fin_showcase_a":  "One tool",
+                "fin_ba_f3":  "Funding, fees and rebates accounted separately",
+                "crm_pg_f4":  "Locale-aware editing across emails, push, in-app, surveys",
+                "fin_ba_f5":  "Multi-account aggregation with per-wallet filters",
+                "cta_waitlist":  "Join the waitlist",
+                "workshop":  "In the workshop",
+                "crm_lede":  "Desktop tools for marketers and CRM operators who got tired of paying $99/month to copy-paste the same email into the same dashboard. Mass editors, exporters, two-way syncs — local-first.",
+                "back":  "Back to all categories",
+                "fin_title_a":  "For traders who don\u0026rsquo;t want",
+                "fin_ba_f1":  "Spot · Futures USD-M · Futures COIN-M imports",
+                "crm_pg_f2":  "Customer.io two-way sync (US \u0026amp; EU regions)",
+                "cta_alpha":  "Request alpha access",
+                "cta_manifesto":  "Read the manifesto",
+                "fin_ba_f2":  "Per-symbol \u0026amp; per-month P/L breakdown",
+                "crm_title_a":  "For the people who",
+                "crm_pg_f1":  "Multi-project storage with deep copy \u0026amp; bulk ops",
+                "fin_lede":  "Local-first analyzers and journals for crypto, futures, and spot. Crunch your CSVs on your machine. Your numbers never leave the desk.",
+                "crm_showcase_b":  "shipping in alpha.",
+                "coming":  "Coming Q3 2026",
+                "fin_eyebrow":  "Category · Finance \u0026amp; Trading",
+                "crm_pg_f3":  "WYSIWYG + HTML mode with syntax highlighting",
+                "fin_title_b":  "their broker to know.",
+                "crm_pg_tag":  "Mass HTML email \u0026amp; push editor for Customer.io operators.",
+                "fin_ba_f4":  "CSV in, CSV out — no API key needed, no cloud sync",
+                "crm_showcase_a":  "One tool",
+                "fin_showcase_b":  "shipping in 2026.",
+                "fin_ba_desc":  "A desktop journal that reads your raw Binance CSV exports and turns them into an honest P/L view: realized, unrealized, fees, funding, by symbol, by month. Local files only — your trade history stays on your disk."
+            },
+    "language_label":  "Language",
+    "contact":  {
+                    "eyebrow":  "Talk to us",
+                    "request_success_title":  "Thanks. Got it.",
+                    "title_b":  "letter.",
+                    "reply_main":  "We answer Mon–Fri, within 2 business days. One real person, not a queue.",
+                    "direct_lines":  "Direct lines",
+                    "label_support":  "Support",
+                    "label_hello":  "Hello",
+                    "success_body":  "You will hear back within two business days.",
+                    "error_title":  "Couldn\u0027t send:",
+                    "tab_message":  "Send a message",
+                    "title_a":  "Write us a",
+                    "reply_mute":  "For tool requests we read everything but only reply if we are building it or want clarification.",
+                    "success_title":  "Message received.",
+                    "tab_request":  "Request a tool",
+                    "message_intro":  "Refunds, partnerships, bug reports, or just to tell us we got the manifesto wrong — write in.",
+                    "request_intro":  "The roadmap is open. Tell us what you wish existed — what spreadsheet you keep duct-taping, what SaaS you keep cancelling and resubscribing to, what report you build by hand every Monday. If 10 people ask for the same thing, we will build it. If you are the only one and it is clever — we will build it anyway.",
+                    "request_success_body":  "We read every request. If yours fits the workshop, you will hear back.",
+                    "label_refund":  "Refund",
+                    "reply_window":  "Reply window",
+                    "lede":  "One person reads every message and replies within two business days. No ticketing system. No first-line support bot. No \"your call is important to us\". Pick a channel below — or just send a tool request straight from the form."
+                },
+    "nav":  {
+                "tools":  "Tools",
+                "request":  "Request",
+                "contact":  "Contact",
+                "about":  "About"
+            },
+    "privacy":  {
+                    "eyebrow":  "Legal · Privacy",
+                    "title_b":  "on your disk.",
+                    "lede":  "Short version: our desktop tools do not phone home. We collect the bare minimum we need to sell you a license, send you a download link, and refund you if you ask. That is it.",
+                    "title_a":  "Your data stays"
+                },
+    "footer":  {
+                   "privacy":  "Privacy",
+                   "products":  "Products",
+                   "blurb":  "Pay-once desktop tools for people who actually do the work.",
+                   "request_a_tool":  "Request a tool",
+                   "legal":  "Legal",
+                   "company":  "Company",
+                   "terms":  "Terms",
+                   "all_tools":  "All tools",
+                   "refund":  "Refund policy",
+                   "upcoming":  "Upcoming · soon"
+               },
+    "refund":  {
+                   "eyebrow":  "Legal · Refund",
+                   "title_b":  "No questions.",
+                   "lede":  "If the tool does not fit your workflow, does not do what the page promised, or you simply changed your mind — email us within 30 days of purchase and we will refund the full amount. No forms. No exit interview. No \"are you sure?\" popup.",
+                   "title_a":  "30 days."
+               }
   }
 }

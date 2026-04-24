@@ -1,0 +1,113 @@
+{%- comment -%}
+  WA Page — CRM & Marketing category.
+  Lists tools tagged "crm" or product type "CRM" — falls back to a curated
+  showcase if no products are tagged yet.
+{%- endcomment -%}
+
+<section class="wa-collection wa-section--bleed" aria-labelledby="wa-cat-crm-title">
+  <div class="wa-aurora wa-aurora--soft" aria-hidden="true"></div>
+
+  <div class="wa-container wa-collection__inner">
+    <header class="wa-collection__header" style="text-align: center; max-width: 760px; margin: 0 auto var(--wa-space-12);">
+      <span class="wa-eyebrow">{{ 'wa.cat.crm_eyebrow' | t | default: 'Category · CRM &amp; Marketing' }}</span>
+      <h1 id="wa-cat-crm-title" class="wa-collection__title">
+        {{ 'wa.cat.crm_title_a' | t | default: 'For the people who' }}
+        <span class="wa-gradient-text">{{ 'wa.cat.crm_title_b' | t | default: 'press send.' }}</span>
+      </h1>
+      <p class="wa-collection__desc wa-prose" style="margin: var(--wa-space-4) auto 0;">
+        {{ 'wa.cat.crm_lede' | t | default: 'Desktop tools for marketers and CRM operators who got tired of paying $99/month to copy-paste the same email into the same dashboard. Mass editors, exporters, two-way syncs — local-first.' }}
+      </p>
+    </header>
+
+    {%- assign crm_products = collections['crm-marketing'].products | default: products -%}
+    {%- assign tools_count = 0 -%}
+
+    <div class="wa-collection__grid" role="list">
+      {%- for product in collections.all.products -%}
+        {%- assign matches = false -%}
+        {%- if product.type contains 'CRM' or product.type contains 'Marketing' -%}{%- assign matches = true -%}{%- endif -%}
+        {%- if product.tags contains 'crm' or product.tags contains 'marketing' -%}{%- assign matches = true -%}{%- endif -%}
+        {%- if product.handle contains 'promptgrid' -%}{%- assign matches = true -%}{%- endif -%}
+        {%- if matches -%}
+          {%- assign tools_count = tools_count | plus: 1 -%}
+          <a href="{{ product.url }}" class="wa-tool-card" role="listitem">
+            <div class="wa-tool-card__media">
+              {%- if product.featured_media -%}
+                {{ product.featured_media | image_url: width: 720 | image_tag:
+                  loading: 'lazy',
+                  sizes: '(min-width: 1024px) 33vw, 100vw',
+                  widths: '360, 540, 720',
+                  class: 'wa-tool-card__image',
+                  alt: product.title
+                }}
+              {%- else -%}
+                <div class="wa-tool-card__placeholder" aria-hidden="true">
+                  <span>{{ product.title | slice: 0, 1 | upcase }}</span>
+                </div>
+              {%- endif -%}
+            </div>
+            <div class="wa-tool-card__body">
+              <span class="wa-eyebrow">{{ product.type | default: 'Desktop tool' }}</span>
+              <h3 class="wa-tool-card__title">{{ product.title }}</h3>
+              <p class="wa-tool-card__desc">
+                {{ product.description | strip_html | truncatewords: 18 }}
+              </p>
+              <div class="wa-tool-card__foot">
+                <span class="wa-tool-card__price">{{ product.price | money_without_trailing_zeros }}</span>
+                <span class="wa-tool-card__cta">View →</span>
+              </div>
+            </div>
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if tools_count == 0 -%}
+      <div class="wa-collection__showcase">
+        <header class="wa-collection__showcase-head">
+          <span class="wa-eyebrow">{{ 'wa.cat.workshop' | t | default: 'In the workshop' }}</span>
+          <h2 class="wa-collection__showcase-title">
+            {{ 'wa.cat.crm_showcase_a' | t | default: 'One tool' }}
+            <span class="wa-gradient-text">{{ 'wa.cat.crm_showcase_b' | t | default: 'shipping in alpha.' }}</span>
+          </h2>
+        </header>
+
+        <div class="wa-showcase-grid" style="grid-template-columns: minmax(0, 720px); justify-content: center;">
+          <article class="wa-showcase-card">
+            <div class="wa-showcase-card__head">
+              <span class="wa-showcase-card__badge wa-showcase-card__badge--alpha">{{ 'wa.cat.alpha' | t | default: 'Closed alpha' }}</span>
+              <span class="wa-showcase-card__price">$149 once</span>
+            </div>
+            <h3 class="wa-showcase-card__title">PromptGrid</h3>
+            <p class="wa-showcase-card__tag">
+              {{ 'wa.cat.crm_pg_tag' | t | default: 'Mass HTML email &amp; push editor for Customer.io operators.' }}
+            </p>
+            <p class="wa-showcase-card__desc">
+              {{ 'wa.cat.crm_pg_desc' | t | default: 'A desktop CRM workbench for marketers who run hundreds of campaigns across regions and locales. Edit emails, push, in-app and surveys with WYSIWYG and CodeMirror side-by-side. Pull and push to Customer.io US/EU. ZIP an entire project. Version everything locally — no cloud, no telemetry, no per-seat tax.' }}
+            </p>
+            <ul class="wa-showcase-card__list">
+              <li>{{ 'wa.cat.crm_pg_f1' | t | default: 'Multi-project storage with deep copy &amp; bulk ops' }}</li>
+              <li>{{ 'wa.cat.crm_pg_f2' | t | default: 'Customer.io two-way sync (US &amp; EU regions)' }}</li>
+              <li>{{ 'wa.cat.crm_pg_f3' | t | default: 'WYSIWYG + HTML mode with syntax highlighting' }}</li>
+              <li>{{ 'wa.cat.crm_pg_f4' | t | default: 'Locale-aware editing across emails, push, in-app, surveys' }}</li>
+              <li>{{ 'wa.cat.crm_pg_f5' | t | default: 'Project ZIP archive · full history journal · Ukrainian UI' }}</li>
+            </ul>
+            <div class="wa-showcase-card__meta">
+              <span>Electron · v1.3</span>
+              <span>·</span>
+              <span>Win · macOS · Linux</span>
+            </div>
+            <div class="wa-showcase-card__cta">
+              <a href="/pages/contact#request" class="wa-button-primary">{{ 'wa.cat.cta_alpha' | t | default: 'Request alpha access' }}</a>
+              <a href="/pages/about" class="wa-button-ghost">{{ 'wa.cat.cta_manifesto' | t | default: 'Read the manifesto' }}</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    {%- endif -%}
+
+    <p class="wa-collection__showcase-foot" style="text-align: center; margin-top: var(--wa-space-10);">
+      <a href="/pages/tools" class="wa-link-underline">← {{ 'wa.cat.back' | t | default: 'Back to all categories' }}</a>
+    </p>
+  </div>
+</section>

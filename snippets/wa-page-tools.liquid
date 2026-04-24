@@ -1,0 +1,53 @@
+{%- comment -%}
+  WA Tools Hub — landing for /pages/tools.
+  Shows two category cards (CRM & Marketing, Finance & Trading)
+  instead of dumping every product on one grid.
+{%- endcomment -%}
+
+<section class="wa-cat-hub wa-section--bleed" aria-labelledby="wa-tools-hub-title">
+  <div class="wa-aurora wa-aurora--soft" aria-hidden="true"></div>
+
+  <header class="wa-cat-hub__head">
+    <span class="wa-eyebrow">{{ 'wa.tools_hub.eyebrow' | t | default: 'Two universes, one workshop' }}</span>
+    <h1 id="wa-tools-hub-title" class="wa-cat-hub__title" style="font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; margin: var(--wa-space-3) 0 var(--wa-space-4);">
+      {{ 'wa.tools_hub.title_a' | t | default: 'Pick your' }}
+      <span class="wa-gradient-text">{{ 'wa.tools_hub.title_b' | t | default: 'workshop.' }}</span>
+    </h1>
+    <p class="wa-cat-hub__lede" style="color: var(--wa-text-secondary, var(--wa-text-muted)); font-size: 1.05rem; line-height: 1.55;">
+      {{ 'wa.tools_hub.lede' | t | default: 'Two categories. Both desktop. Both pay-once. Both shipping in 2026.' }}
+    </p>
+  </header>
+
+  <div class="wa-cat-hub__grid">
+
+    <a href="/pages/crm-marketing" class="wa-cat-hub__card">
+      <span class="wa-cat-hub__card-glyph">CRM · 01</span>
+      <h2 class="wa-cat-hub__card-title">{{ 'wa.tools_hub.crm_title' | t | default: 'CRM &amp; Marketing' }}</h2>
+      <p class="wa-cat-hub__card-desc">
+        {{ 'wa.tools_hub.crm_desc' | t | default: 'Email builders, segmentation helpers, campaign exporters — for the people who actually press send.' }}
+      </p>
+      <div class="wa-cat-hub__card-meta">
+        <span>{{ 'wa.tools_hub.crm_count' | t | default: '1 tool · 1 in alpha' }}</span>
+        <span class="wa-cat-hub__card-cta">{{ 'wa.tools_hub.view_tools' | t | default: 'View tools' }} →</span>
+      </div>
+    </a>
+
+    <a href="/pages/finance-trading" class="wa-cat-hub__card">
+      <span class="wa-cat-hub__card-glyph">FIN · 02</span>
+      <h2 class="wa-cat-hub__card-title">{{ 'wa.tools_hub.fin_title' | t | default: 'Finance &amp; Trading' }}</h2>
+      <p class="wa-cat-hub__card-desc">
+        {{ 'wa.tools_hub.fin_desc' | t | default: 'Local P/L analyzers, exchange CSV crunchers, journal tools — for traders who don&rsquo;t want their broker to know.' }}
+      </p>
+      <div class="wa-cat-hub__card-meta">
+        <span>{{ 'wa.tools_hub.fin_count' | t | default: '1 tool · coming Q3' }}</span>
+        <span class="wa-cat-hub__card-cta">{{ 'wa.tools_hub.view_tools' | t | default: 'View tools' }} →</span>
+      </div>
+    </a>
+
+  </div>
+
+  <p style="text-align: center; margin-top: var(--wa-space-12); color: var(--wa-text-muted); font-size: 0.95rem;">
+    {{ 'wa.tools_hub.foot' | t | default: 'Want a third category? ' }}
+    <a href="/pages/contact#request" class="wa-link-underline">{{ 'wa.tools_hub.foot_link' | t | default: 'Tell us what you wish existed.' }}</a>
+  </p>
+</section>

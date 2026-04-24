@@ -1,0 +1,175 @@
+﻿{%- liquid
+  assign p = product
+  assign price_amount = p.price | money_without_trailing_zeros
+  assign on_sale = false
+  if p.compare_at_price > p.price
+    assign on_sale = true
+  endif
+  assign available = p.available
+-%}
+
+<section class="wa-product wa-section--bleed" aria-labelledby="wa-product-title">
+  <div class="wa-aurora" aria-hidden="true"></div>
+  <div class="wa-grain" aria-hidden="true"></div>
+
+  <div class="wa-container wa-product__inner">
+    <a href="{{ routes.collections_url }}/all" class="wa-product__back wa-link">в†ђ All tools</a>
+
+    <div class="wa-product__layout">
+      {%- comment -%} Visual / mockup column {%- endcomment -%}
+      <div class="wa-product__media">
+        {%- if p.featured_media -%}
+          <div class="wa-product__image-wrap">
+            {{ p.featured_media | image_url: width: 1400 | image_tag:
+              loading: 'eager',
+              fetchpriority: 'high',
+              sizes: '(min-width: 1024px) 50vw, 100vw',
+              widths: '480, 720, 1080, 1400',
+              class: 'wa-product__image',
+              alt: p.featured_media.alt | default: p.title
+            }}
+          </div>
+        {%- else -%}
+          {%- comment -%} Fallback to PromptGrid-style app mock if no image {%- endcomment -%}
+          <div class="wa-app-window wa-product__mock" aria-hidden="true">
+            <div class="wa-app-window__bar">
+              <div class="wa-app-window__lights"><span></span><span></span><span></span></div>
+              <div class="wa-app-window__title">{{ p.title }}</div>
+              <div style="width: 36px;"></div>
+            </div>
+            <div class="wa-app-pg">
+              <aside class="wa-app-pg__sidebar">
+                <div class="wa-app-pg__sidebar-item wa-app-pg__sidebar-item--active"></div>
+                <div class="wa-app-pg__sidebar-item" style="width:75%"></div>
+                <div class="wa-app-pg__sidebar-item" style="width:90%"></div>
+                <div class="wa-app-pg__sidebar-item" style="width:60%"></div>
+                <div class="wa-app-pg__sidebar-item" style="width:80%"></div>
+                <div class="wa-app-pg__sidebar-item" style="width:50%"></div>
+              </aside>
+              <div class="wa-app-pg__canvas">
+                <div class="wa-app-pg__tile wa-app-pg__tile--accent"></div>
+                <div class="wa-app-pg__tile"></div>
+                <div class="wa-app-pg__tile"></div>
+                <div class="wa-app-pg__tile"></div>
+                <div class="wa-app-pg__tile wa-app-pg__tile--accent"></div>
+                <div class="wa-app-pg__tile"></div>
+                <div class="wa-app-pg__tile"></div>
+                <div class="wa-app-pg__tile"></div>
+                <div class="wa-app-pg__tile wa-app-pg__tile--accent"></div>
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- if p.media.size > 1 -%}
+          <div class="wa-product__thumbs" role="list">
+            {%- for media in p.media limit: 6 -%}
+              <div class="wa-product__thumb" role="listitem">
+                {{ media | image_url: width: 240 | image_tag:
+                  loading: 'lazy',
+                  alt: media.alt | default: p.title,
+                  widths: '120, 240'
+                }}
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- comment -%} Info column {%- endcomment -%}
+      <div class="wa-product__info">
+        <span class="wa-eyebrow">{{ p.type | default: 'Desktop tool' }}</span>
+        <h1 id="wa-product-title" class="wa-product__title">{{ p.title }}</h1>
+
+        {%- if p.metafields.custom.tagline -%}
+          <p class="wa-product__tagline">{{ p.metafields.custom.tagline }}</p>
+        {%- elsif p.description != blank -%}
+          <p class="wa-product__tagline">{{ p.description | strip_html | truncatewords: 28 }}</p>
+        {%- endif -%}
+
+        <div class="wa-price-card">
+          <div class="wa-price-card__row">
+            <span class="wa-price-card__amount">{{ price_amount }}</span>
+            {%- if on_sale -%}
+              <span class="wa-price-card__compare"><s>{{ p.compare_at_price | money_without_trailing_zeros }}</s></span>
+            {%- endif -%}
+            <span class="wa-price-card__note">one-time В· lifetime updates</span>
+          </div>
+
+          {%- form 'product', p, id: 'wa-product-form', class: 'wa-product__form' -%}
+            <input type="hidden" name="id" value="{{ p.selected_or_first_available_variant.id }}">
+            {%- if available -%}
+              <button type="submit" class="wa-button-primary wa-product__buy" name="add">
+                Get {{ p.title }}
+              </button>
+            {%- else -%}
+              <button type="button" class="wa-button-primary wa-product__buy" disabled>
+                Coming soon
+              </button>
+            {%- endif -%}
+            <a href="/pages/contact#request" class="wa-link wa-product__alt">or request a custom build в†’</a>
+          {%- endform -%}
+        </div>
+
+        <ul class="wa-product__guarantees">
+          <li>
+            <span aria-hidden="true">вњ“</span>
+            <span>Pay once. Yours forever.</span>
+          </li>
+          <li>
+            <span aria-hidden="true">вњ“</span>
+            <span>No subscriptions. No telemetry.</span>
+          </li>
+          <li>
+            <span aria-hidden="true">вњ“</span>
+            <span>Works fully offline on macOS &amp; Windows.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    {%- comment -%} Long description / features rendered below {%- endcomment -%}
+    {%- if p.description != blank -%}
+      <div class="wa-product__longdesc">
+        <div class="wa-prose">
+          {{ p.description }}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} Specs metafield (custom.specs as rich text or JSON list) {%- endcomment -%}
+    {%- assign specs = p.metafields.custom.specs -%}
+    {%- if specs != blank -%}
+      <div class="wa-specs">
+        <h2 class="wa-specs__title">Specs</h2>
+        <div class="wa-specs__grid">
+          {%- if specs.value.first.label -%}
+            {%- for row in specs.value -%}
+              <div class="wa-specs__row">
+                <dt>{{ row.label }}</dt>
+                <dd>{{ row.value }}</dd>
+              </div>
+            {%- endfor -%}
+          {%- else -%}
+            <div class="wa-prose">{{ specs }}</div>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    <div class="wa-product__cta">
+      <a href="{{ routes.collections_url }}/all" class="wa-button-secondary">Browse all tools</a>
+      <a href="/pages/contact#request" class="wa-link">Need something else? Request it в†’</a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "WA Product Page",
+  "tag": "section",
+  "class": "wa-section--bleed",
+  "settings": [],
+  "presets": [{ "name": "WA Product Page" }]
+}
+{% endschema %}

@@ -362,5 +362,181 @@
       "success_moderated": "Komentář odeslán, čeká na schválení",
       "success": "Komentář zveřejněn"
     }
+  },
+  "wa": {
+    "tools_hub":  {
+                      "title_a":  "Vyber si svou",
+                      "crm_count":  "1 nástroj · 1 v alpha",
+                      "crm_desc":  "Editory e-mailů, pomocníky pro segmentaci, exportéry kampaní — pro ty, kdo opravdu mačkají Odeslat.",
+                      "fin_desc":  "Lokální P/L analyzátory, parsery CSV z burz, deníky obchodů — pro tradery, kteří nechtějí, aby broker věděl.",
+                      "fin_title":  "Finance a trading",
+                      "title_b":  "dílnu.",
+                      "crm_title":  "CRM a marketing",
+                      "fin_count":  "1 nástroj · plánováno Q3",
+                      "view_tools":  "Zobrazit nástroje",
+                      "foot_link":  "Řekni nám, co ti chybí.",
+                      "eyebrow":  "Dva světy · jedna dílna",
+                      "lede":  "Dvě kategorie. Obě desktopové. Obě pay-once. Obě vyjdou v 2026.",
+                      "foot":  "Chceš třetí kategorii? "
+                  },
+    "pg":  {
+               "title_a":  "Edituj kampaně hromadně",
+               "f5":  "ZIP archiv projektu · plný log změn · UI v ukrajinštině",
+               "cta_more":  "Zobrazit kategorii",
+               "f2":  "Obousměrný sync s Customer.io (US a EU)",
+               "cta_alpha":  "Požádat o alpha přístup",
+               "desc":  "WYSIWYG a CodeMirror vedle sebe. Pull a push do Customer.io US/EU. Celý projekt jako ZIP. Verzování lokálně — žádný cloud, žádná telemetrie, žádný poplatek za sedadlo.",
+               "f1":  "Multi-projektové úložiště s deep-copy a hromadnými operacemi",
+               "title_b":  "na vlastním stroji.",
+               "f4":  "Vícejazyčná editace: e-maily, push, in-app, ankety",
+               "badge":  "Uzavřená alpha",
+               "f3":  "Režim WYSIWYG + HTML se zvýrazněním syntaxe",
+               "eyebrow":  "PromptGrid · CRM dílna",
+               "lede":  "Desktopová dílna pro markeťáky, kteří posílají stovky e-mailů, push, in-app a anket napříč jazyky — bez poplatku za sedadlo a bez svěření cloudovému editoru.",
+               "tag":  "Hromadný editor HTML e-mailů a push notifikací pro operátory Customer.io."
+           },
+    "about":  {
+                  "eyebrow":  "O nás · založeno 2026",
+                  "title_b":  "Jednou.",
+                  "lede":  "Někde po cestě software sežral svět — a pak začal vybírat nájem za stopy po kousnutí. Každý workflow se stal předplatným. Každý nástroj se stal nájemníkem na tvém bankovním účtu. Každý operátor, marketér a trader začal platit 9, 29, 99 € měsíčně za privilegium dělat svou vlastní práci. Myslíme si, že je to divné.",
+                  "title_a":  "Software, který si koupíš."
+              },
+    "form":  {
+                 "message":  "Zpráva",
+                 "cat_finance":  "Finance a trading",
+                 "request_hint":  "Žádné NDA. Žádné kecy. Jen popiš co by ti ušetřilo nejvíc času.",
+                 "cat_other":  "Produktivita / Jiné",
+                 "request_placeholder":  "Čím kratší a podivnější, tím lepší.",
+                 "category":  "Kategorie",
+                 "subject_placeholder":  "Vrácení · partnerství · bug · jiné",
+                 "request_what":  "Jaký nástroj bys chtěl aby existoval?",
+                 "name":  "Tvoje jméno",
+                 "subject":  "Předmět",
+                 "cat_crm":  "CRM a marketing",
+                 "email":  "Email"
+             },
+    "showcase":  {
+                     "eyebrow":  "Aktuálně k dispozici"
+                 },
+    "tagline":  "Jednou koupeno. Tvoje navždy.",
+    "cta":  {
+                "read_manifesto":  "Přečíst manifest",
+                "send_message":  "Odeslat",
+                "browse_tools":  "Procházet nástroje",
+                "get_a_tool":  "Koupit nástroj",
+                "send_request":  "Odeslat žádost"
+            },
+    "notfound":  {
+                     "shortcut_contact_key":  "Mluvit",
+                     "title_a":  "Tahle stránka",
+                     "lede":  "Odkaz je špatný, stránka byla smazaná, nebo jsme ji nikdy nepostavili. Tak či tak — vrátíme tě k něčemu užitečnému.",
+                     "eyebrow":  "Ztracený v dílně",
+                     "shortcut_about_key":  "Číst",
+                     "shortcut_request_key":  "Zeptat se",
+                     "shortcut_tools_key":  "Procházet",
+                     "cta_home":  "Na hlavní stránku",
+                     "title_b":  "se nikdy nedodala.",
+                     "cta_contact":  "Řekni nám, co je rozbité"
+                 },
+    "terms":  {
+                  "eyebrow":  "Právní · Podmínky",
+                  "title_b":  "navždy.",
+                  "lede":  "Lidsky: zaplatíš jednou, dostaneš trvalou licenci na používání aplikace na tvých strojích, zůstaneš s tím co jsi koupil i když zmizíme. Žádné předplatné, žádné automatické obnovení, žádné překvapivé blokace. Delší verze níže.",
+                  "title_a":  "Koupíš jednou. Tvoje"
+              },
+    "hero":  {
+                 "eyebrow":  "Weird Artist · založeno 2026",
+                 "title_b":  "Jednou.",
+                 "subtitle":  "Weird Artist vytváří desktopové nástroje pro markeťáky, tradery a operátory, kteří odmítají pronajímat si vlastní workflow.",
+                 "title_a":  "Software, který si koupíš."
+             },
+    "cat":  {
+                "crm_title_b":  "mačkají Odeslat.",
+                "crm_eyebrow":  "Kategorie · CRM a marketing",
+                "alpha":  "Uzavřená alpha",
+                "fin_ba_tag":  "Lokální P/L analyzátor pro Binance Spot, Futures USD-M a COIN-M.",
+                "crm_pg_f5":  "ZIP archiv projektu · plný log změn · UI v ukrajinštině",
+                "crm_pg_desc":  "Desktopová CRM dílna pro markeťáky, kteří vedou stovky kampaní napříč regiony a jazyky. WYSIWYG a CodeMirror vedle sebe. Pull a push do Customer.io US/EU. Celý projekt jako ZIP. Verzování lokálně — žádný cloud, žádná telemetrie, žádný poplatek za sedadlo.",
+                "fin_showcase_a":  "Jeden nástroj",
+                "fin_ba_f3":  "Funding, poplatky a rebaty počítány zvlášť",
+                "crm_pg_f4":  "Vícejazyčná editace: e-maily, push, in-app, ankety",
+                "fin_ba_f5":  "Agregace více účtů s filtry podle peněženky",
+                "cta_waitlist":  "Na waitlist",
+                "workshop":  "V dílně",
+                "crm_lede":  "Desktopové nástroje pro markeťáky a CRM operátory unavené z placení 99 $/měsíc za kopírování stejného e-mailu do stejného dashboardu. Hromadné editory, exportéry, obousměrné synky — local-first.",
+                "back":  "Zpět na všechny kategorie",
+                "fin_title_a":  "Pro tradery, kteří nechtějí,",
+                "fin_ba_f1":  "Importy: Spot · Futures USD-M · Futures COIN-M",
+                "crm_pg_f2":  "Obousměrný sync s Customer.io (US a EU)",
+                "cta_alpha":  "Požádat o alpha přístup",
+                "cta_manifesto":  "Přečíst manifest",
+                "fin_ba_f2":  "P/L podle symbolu a podle měsíce",
+                "crm_title_a":  "Pro ty, kdo opravdu",
+                "crm_pg_f1":  "Multi-projektové úložiště s deep-copy a hromadnými operacemi",
+                "fin_lede":  "Lokální analyzátory a deníky pro krypto, futures a spot. CSV crunchneš na svém počítači. Tvá čísla neopustí stůl.",
+                "crm_showcase_b":  "v alphě.",
+                "coming":  "Q3 2026",
+                "fin_eyebrow":  "Kategorie · Finance a trading",
+                "crm_pg_f3":  "Režim WYSIWYG + HTML se zvýrazněním syntaxe",
+                "fin_title_b":  "aby broker viděl.",
+                "crm_pg_tag":  "Hromadný editor HTML e-mailů a push notifikací pro operátory Customer.io.",
+                "fin_ba_f4":  "CSV dovnitř, CSV ven — bez API key, bez cloudu",
+                "crm_showcase_a":  "Jeden nástroj",
+                "fin_showcase_b":  "vyjde v 2026.",
+                "fin_ba_desc":  "Desktopový deník, který čte surové CSV exporty z Binance a převádí je na poctivý P/L: realizovaný, nerealizovaný, poplatky, funding, podle symbolu, podle měsíce. Pouze lokální soubory — tvá historie obchodů zůstává na disku."
+            },
+    "language_label":  "Jazyk",
+    "contact":  {
+                    "eyebrow":  "Napiš nám",
+                    "request_success_title":  "Díky. Máme.",
+                    "title_b":  "dopis.",
+                    "reply_main":  "Odpovídáme po–pá do 2 pracovních dnů. Jedna reálná osoba, ne fronta.",
+                    "direct_lines":  "Přímé kanály",
+                    "label_support":  "Podpora",
+                    "label_hello":  "Ahoj",
+                    "success_body":  "Ozveme se do dvou pracovních dnů.",
+                    "error_title":  "Nelze odeslat:",
+                    "tab_message":  "Poslat zprávu",
+                    "title_a":  "Napiš nám",
+                    "reply_mute":  "Všechny žádosti o nástroje čteme, ale odpovídáme jen když je stavíme nebo potřebujeme upřesnění.",
+                    "success_title":  "Zpráva přijata.",
+                    "tab_request":  "Vyžádat nástroj",
+                    "message_intro":  "Vrácení peněz, partnerství, bug reporty, nebo nám prostě říct, že jsme napsali manifest špatně — piš.",
+                    "request_intro":  "Roadmapa je otevřená. Řekni nám co bys chtěl vidět — jaký excel pořád lepíš lepenkou, jaký SaaS pořád rušíš a znovu předplácíš, jaký report stavíš ručně každé pondělí. Když 10 lidí požádá o totéž, postavíme to. Když jsi sám a je to chytré — postavíme to stejně.",
+                    "request_success_body":  "Čteme každou žádost. Jestli ta tvoje pasuje do dílny, ozveme se.",
+                    "label_refund":  "Vrácení",
+                    "reply_window":  "Doba odpovědi",
+                    "lede":  "Každou zprávu čte jedna osoba a odpoví do dvou pracovních dnů. Žádný ticketing systém. Žádný bot první linie. Žádné „váš hovor je pro nás důležitý\". Vyber kanál níže — nebo pošli žádost o nástroj rovnou z formuláře."
+                },
+    "nav":  {
+                "tools":  "Nástroje",
+                "request":  "Žádost",
+                "contact":  "Kontakt",
+                "about":  "O nás"
+            },
+    "privacy":  {
+                    "eyebrow":  "Právní · Soukromí",
+                    "title_b":  "na tvém disku.",
+                    "lede":  "Krátká verze: naše desktopové nástroje nevolají domů. Sbíráme jen absolutní minimum, které potřebujeme abychom ti prodali licenci, poslali odkaz ke stažení a vrátili peníze pokud požádáš. Nic víc.",
+                    "title_a":  "Tvoje data zůstávají"
+                },
+    "footer":  {
+                   "privacy":  "Soukromí",
+                   "products":  "Produkty",
+                   "blurb":  "Pay-once desktopové nástroje pro lidi, kteří práci skutečně dělají.",
+                   "request_a_tool":  "Vyžádat nástroj",
+                   "legal":  "Právní",
+                   "company":  "Firma",
+                   "terms":  "Podmínky",
+                   "all_tools":  "Všechny nástroje",
+                   "refund":  "Vrácení",
+                   "upcoming":  "Brzy k dispozici"
+               },
+    "refund":  {
+                   "eyebrow":  "Právní · Vrácení",
+                   "title_b":  "Bez otázek.",
+                   "lede":  "Pokud nástroj nesedí na tvůj workflow, nedělá co stránka slibovala, nebo sis to prostě rozmyslel — napiš nám do 30 dnů od koupě a vrátíme plnou částku. Žádné formuláře. Žádný exit interview. Žádný popup „jsi si jistý?\".",
+                   "title_a":  "30 dní."
+               }
   }
 }

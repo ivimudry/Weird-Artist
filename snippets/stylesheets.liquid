@@ -1,3 +1,5 @@
 {{ 'overflow-list.css' | asset_url | preload_tag: as: 'style' }}
 {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
 {{ 'weird-artist-custom.css' | asset_url | stylesheet_tag }}
+{{ 'wa-extras.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'wa-custom-select.js' | asset_url }}" defer></script>

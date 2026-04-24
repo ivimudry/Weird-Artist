@@ -1,0 +1,110 @@
+{%- comment -%}
+  WA Page — Finance & Trading category.
+{%- endcomment -%}
+
+<section class="wa-collection wa-section--bleed" aria-labelledby="wa-cat-fin-title">
+  <div class="wa-aurora wa-aurora--soft" aria-hidden="true"></div>
+
+  <div class="wa-container wa-collection__inner">
+    <header class="wa-collection__header" style="text-align: center; max-width: 760px; margin: 0 auto var(--wa-space-12);">
+      <span class="wa-eyebrow">{{ 'wa.cat.fin_eyebrow' | t | default: 'Category · Finance &amp; Trading' }}</span>
+      <h1 id="wa-cat-fin-title" class="wa-collection__title">
+        {{ 'wa.cat.fin_title_a' | t | default: 'For traders who don&rsquo;t want' }}
+        <span class="wa-gradient-text">{{ 'wa.cat.fin_title_b' | t | default: 'their broker to know.' }}</span>
+      </h1>
+      <p class="wa-collection__desc wa-prose" style="margin: var(--wa-space-4) auto 0;">
+        {{ 'wa.cat.fin_lede' | t | default: 'Local-first analyzers and journals for crypto, futures, and spot. Crunch your CSVs on your machine. Your numbers never leave the desk.' }}
+      </p>
+    </header>
+
+    {%- assign tools_count = 0 -%}
+
+    <div class="wa-collection__grid" role="list">
+      {%- for product in collections.all.products -%}
+        {%- assign matches = false -%}
+        {%- if product.type contains 'Trading' or product.type contains 'Finance' -%}{%- assign matches = true -%}{%- endif -%}
+        {%- if product.tags contains 'finance' or product.tags contains 'trading' or product.tags contains 'crypto' -%}{%- assign matches = true -%}{%- endif -%}
+        {%- if product.handle contains 'binance' or product.handle contains 'analizer' or product.handle contains 'analyzer' -%}{%- assign matches = true -%}{%- endif -%}
+        {%- if matches -%}
+          {%- assign tools_count = tools_count | plus: 1 -%}
+          <a href="{{ product.url }}" class="wa-tool-card" role="listitem">
+            <div class="wa-tool-card__media">
+              {%- if product.featured_media -%}
+                {{ product.featured_media | image_url: width: 720 | image_tag:
+                  loading: 'lazy',
+                  sizes: '(min-width: 1024px) 33vw, 100vw',
+                  widths: '360, 540, 720',
+                  class: 'wa-tool-card__image',
+                  alt: product.title
+                }}
+              {%- else -%}
+                <div class="wa-tool-card__placeholder" aria-hidden="true">
+                  <span>{{ product.title | slice: 0, 1 | upcase }}</span>
+                </div>
+              {%- endif -%}
+            </div>
+            <div class="wa-tool-card__body">
+              <span class="wa-eyebrow">{{ product.type | default: 'Desktop tool' }}</span>
+              <h3 class="wa-tool-card__title">{{ product.title }}</h3>
+              <p class="wa-tool-card__desc">
+                {{ product.description | strip_html | truncatewords: 18 }}
+              </p>
+              <div class="wa-tool-card__foot">
+                <span class="wa-tool-card__price">{{ product.price | money_without_trailing_zeros }}</span>
+                <span class="wa-tool-card__cta">View →</span>
+              </div>
+            </div>
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if tools_count == 0 -%}
+      <div class="wa-collection__showcase">
+        <header class="wa-collection__showcase-head">
+          <span class="wa-eyebrow">{{ 'wa.cat.workshop' | t | default: 'In the workshop' }}</span>
+          <h2 class="wa-collection__showcase-title">
+            {{ 'wa.cat.fin_showcase_a' | t | default: 'One tool' }}
+            <span class="wa-gradient-text">{{ 'wa.cat.fin_showcase_b' | t | default: 'shipping in 2026.' }}</span>
+          </h2>
+        </header>
+
+        <div class="wa-showcase-grid" style="grid-template-columns: minmax(0, 720px); justify-content: center;">
+          <article class="wa-showcase-card">
+            <div class="wa-showcase-card__head">
+              <span class="wa-showcase-card__badge">{{ 'wa.cat.coming' | t | default: 'Coming Q3 2026' }}</span>
+              <span class="wa-showcase-card__price">$99 once</span>
+            </div>
+            <h3 class="wa-showcase-card__title">Binance Analizer</h3>
+            <p class="wa-showcase-card__tag">
+              {{ 'wa.cat.fin_ba_tag' | t | default: 'Local P/L analyzer for Binance Spot, Futures USD-M and COIN-M.' }}
+            </p>
+            <p class="wa-showcase-card__desc">
+              {{ 'wa.cat.fin_ba_desc' | t | default: 'A desktop journal that reads your raw Binance CSV exports and turns them into an honest P/L view: realized, unrealized, fees, funding, by symbol, by month. Local files only — your trade history stays on your disk.' }}
+            </p>
+            <ul class="wa-showcase-card__list">
+              <li>{{ 'wa.cat.fin_ba_f1' | t | default: 'Spot · Futures USD-M · Futures COIN-M imports' }}</li>
+              <li>{{ 'wa.cat.fin_ba_f2' | t | default: 'Per-symbol &amp; per-month P/L breakdown' }}</li>
+              <li>{{ 'wa.cat.fin_ba_f3' | t | default: 'Funding, fees and rebates accounted separately' }}</li>
+              <li>{{ 'wa.cat.fin_ba_f4' | t | default: 'CSV in, CSV out — no API key needed, no cloud sync' }}</li>
+              <li>{{ 'wa.cat.fin_ba_f5' | t | default: 'Multi-account aggregation with per-wallet filters' }}</li>
+            </ul>
+            <div class="wa-showcase-card__meta">
+              <span>Electron · pre-alpha</span>
+              <span>·</span>
+              <span>Win · macOS · Linux</span>
+            </div>
+            <div class="wa-showcase-card__cta">
+              <a href="/pages/contact#request" class="wa-button-primary">{{ 'wa.cat.cta_waitlist' | t | default: 'Join the waitlist' }}</a>
+              <a href="/pages/about" class="wa-button-ghost">{{ 'wa.cat.cta_manifesto' | t | default: 'Read the manifesto' }}</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    {%- endif -%}
+
+    <p class="wa-collection__showcase-foot" style="text-align: center; margin-top: var(--wa-space-10);">
+      <a href="/pages/tools" class="wa-link-underline">← {{ 'wa.cat.back' | t | default: 'Back to all categories' }}</a>
+    </p>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+<div class="wa-404 wa-section--bleed">
+  <div class="wa-404__aurora" aria-hidden="true"></div>
+
+  <div class="wa-404__inner">
+    <span class="wa-404__eyebrow">{{ 'wa.notfound.eyebrow' | t | default: 'Lost in the workshop' }}</span>
+
+    <div class="wa-404__code" aria-hidden="true">404</div>
+
+    <h1 class="wa-404__title">
+      {{ 'wa.notfound.title_a' | t | default: 'This page' }}
+      <em>{{ 'wa.notfound.title_b' | t | default: 'never shipped.' }}</em>
+    </h1>
+
+    <p class="wa-404__lede">
+      {{ 'wa.notfound.lede' | t | default: 'The link is wrong, the page was deleted, or we never built it. Either way — let&rsquo;s get you back to something useful.' }}
+    </p>
+
+    <div class="wa-404__cta">
+      <a href="{{ routes.root_url }}" class="wa-button-primary">
+        {{ 'wa.notfound.cta_home' | t | default: 'Back to home' }}
+      </a>
+      <a href="/pages/contact" class="wa-button-ghost">
+        {{ 'wa.notfound.cta_contact' | t | default: 'Tell us what broke' }}
+      </a>
+    </div>
+
+    <div class="wa-404__shortcuts">
+      <a href="{{ routes.collections_url }}/all" class="wa-404__shortcut">
+        <span class="wa-404__shortcut-key">01 · {{ 'wa.notfound.shortcut_tools_key' | t | default: 'Browse' }}</span>
+        <span class="wa-404__shortcut-name">{{ 'wa.nav.tools' | t | default: 'Tools' }} <span class="wa-404__shortcut-arrow">→</span></span>
+      </a>
+      <a href="/pages/about" class="wa-404__shortcut">
+        <span class="wa-404__shortcut-key">02 · {{ 'wa.notfound.shortcut_about_key' | t | default: 'Read' }}</span>
+        <span class="wa-404__shortcut-name">{{ 'wa.nav.about' | t | default: 'About' }} <span class="wa-404__shortcut-arrow">→</span></span>
+      </a>
+      <a href="/pages/contact#request" class="wa-404__shortcut">
+        <span class="wa-404__shortcut-key">03 · {{ 'wa.notfound.shortcut_request_key' | t | default: 'Ask' }}</span>
+        <span class="wa-404__shortcut-name">{{ 'wa.nav.request' | t | default: 'Request a tool' }} <span class="wa-404__shortcut-arrow">→</span></span>
+      </a>
+      <a href="/pages/contact" class="wa-404__shortcut">
+        <span class="wa-404__shortcut-key">04 · {{ 'wa.notfound.shortcut_contact_key' | t | default: 'Talk' }}</span>
+        <span class="wa-404__shortcut-name">{{ 'wa.nav.contact' | t | default: 'Contact' }} <span class="wa-404__shortcut-arrow">→</span></span>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "WA 404",
+  "tag": "section",
+  "class": "wa-section--bleed",
+  "settings": [],
+  "presets": [{ "name": "WA 404" }]
+}
+{% endschema %}

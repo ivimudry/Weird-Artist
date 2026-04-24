@@ -1,0 +1,170 @@
+﻿<section class="wa-collection wa-section--bleed" aria-labelledby="wa-collection-title">
+  <div class="wa-aurora wa-aurora--soft" aria-hidden="true"></div>
+
+  <div class="wa-container wa-collection__inner">
+    <header class="wa-collection__header">
+      <span class="wa-eyebrow">
+        {%- if collection.handle == 'all' -%}All tools{%- else -%}Collection{%- endif -%}
+      </span>
+      <h1 id="wa-collection-title" class="wa-collection__title">
+        {{ collection.title | default: 'Tools' }}
+      </h1>
+      {%- if collection.description != blank -%}
+        <div class="wa-collection__desc wa-prose">
+          {{ collection.description }}
+        </div>
+      {%- endif -%}
+      <p class="wa-collection__count">
+        {{ collection.products_count | default: collection.all_products_count }}
+        {%- if collection.products_count == 1 -%} tool{%- else -%} tools{%- endif -%}
+      </p>
+    </header>
+
+    {%- if collection.products.size > 0 -%}
+      <div class="wa-collection__grid" role="list">
+        {%- for product in collection.products -%}
+          <a href="{{ product.url }}" class="wa-tool-card" role="listitem">
+            <div class="wa-tool-card__media">
+              {%- if product.featured_media -%}
+                {{ product.featured_media | image_url: width: 720 | image_tag:
+                  loading: 'lazy',
+                  sizes: '(min-width: 1024px) 33vw, 100vw',
+                  widths: '360, 540, 720',
+                  class: 'wa-tool-card__image',
+                  alt: product.title
+                }}
+              {%- else -%}
+                <div class="wa-tool-card__placeholder" aria-hidden="true">
+                  <span>{{ product.title | slice: 0, 1 | upcase }}</span>
+                </div>
+              {%- endif -%}
+            </div>
+            <div class="wa-tool-card__body">
+              <span class="wa-eyebrow">{{ product.type | default: 'Desktop tool' }}</span>
+              <h3 class="wa-tool-card__title">{{ product.title }}</h3>
+              <p class="wa-tool-card__desc">
+                {{ product.description | strip_html | truncatewords: 18 }}
+              </p>
+              <div class="wa-tool-card__foot">
+                <span class="wa-tool-card__price">{{ product.price | money_without_trailing_zeros }}</span>
+                <span class="wa-tool-card__cta">View в†’</span>
+              </div>
+            </div>
+          </a>
+        {%- endfor -%}
+      </div>
+
+      {%- if paginate and paginate.pages > 1 -%}
+        <nav class="wa-pagination" aria-label="Pagination">
+          {%- if paginate.previous -%}
+            <a href="{{ paginate.previous.url }}" class="wa-link">в†ђ Prev</a>
+          {%- endif -%}
+          <span class="wa-pagination__info">
+            Page {{ paginate.current_page }} / {{ paginate.pages }}
+          </span>
+          {%- if paginate.next -%}
+            <a href="{{ paginate.next.url }}" class="wa-link">Next в†’</a>
+          {%- endif -%}
+        </nav>
+      {%- endif -%}
+    {%- else -%}
+      <div class="wa-collection__showcase">
+        <header class="wa-collection__showcase-head">
+          <span class="wa-eyebrow">In the workshop</span>
+          <h2 class="wa-collection__showcase-title">
+            Two tools. <span class="wa-gradient-text">Both shipping soon.</span>
+          </h2>
+          <p class="wa-collection__showcase-lede">
+            The store is empty on purpose вЂ” we&rsquo;d rather ship two great
+            binaries than thirty SaaS landing pages. Here&rsquo;s what&rsquo;s
+            cooking right now.
+          </p>
+        </header>
+
+        <div class="wa-showcase-grid">
+          <article class="wa-showcase-card">
+            <div class="wa-showcase-card__head">
+              <span class="wa-showcase-card__badge wa-showcase-card__badge--alpha">Closed alpha</span>
+              <span class="wa-showcase-card__price">$149 once</span>
+            </div>
+            <h3 class="wa-showcase-card__title">PromptGrid</h3>
+            <p class="wa-showcase-card__tag">
+              Mass HTML email & push editor for Customer.io operators.
+            </p>
+            <p class="wa-showcase-card__desc">
+              A desktop CRM workbench for marketers who run hundreds of
+              campaigns across regions and locales. Edit emails, push, in-app
+              and surveys with WYSIWYG and CodeMirror side-by-side. Pull and
+              push to Customer.io US/EU. ZIP an entire project. Version
+              everything locally вЂ” no cloud, no telemetry, no per-seat tax.
+            </p>
+            <ul class="wa-showcase-card__list">
+              <li>Multi-project storage with deep copy & bulk ops</li>
+              <li>Customer.io two-way sync (US & EU regions)</li>
+              <li>WYSIWYG + HTML mode with syntax highlighting</li>
+              <li>Locale-aware editing across emails, push, in-app, surveys</li>
+              <li>Project ZIP archive В· full history journal В· Ukrainian UI</li>
+            </ul>
+            <div class="wa-showcase-card__meta">
+              <span>Electron В· v1.3</span>
+              <span>В·</span>
+              <span>Win В· macOS В· Linux</span>
+            </div>
+            <div class="wa-showcase-card__cta">
+              <a href="/pages/contact#request" class="wa-button-primary">Request alpha access</a>
+              <a href="/pages/about" class="wa-button-ghost">Read the manifesto</a>
+            </div>
+          </article>
+
+          <article class="wa-showcase-card">
+            <div class="wa-showcase-card__head">
+              <span class="wa-showcase-card__badge wa-showcase-card__badge--soon">Coming Q3 2026</span>
+              <span class="wa-showcase-card__price">$99 once</span>
+            </div>
+            <h3 class="wa-showcase-card__title">Exchange Analizer</h3>
+            <p class="wa-showcase-card__tag">
+              Local trading P&amp;L analyzer for Binance Spot, USD-M and COIN-M futures.
+            </p>
+            <p class="wa-showcase-card__desc">
+              You export your transaction history from Binance. Exchange
+              Analizer does the math your broker won&rsquo;t вЂ” realised P&amp;L
+              by symbol, funding fee accounting, position cost basis, daily
+              equity curve, and a full per-trade journal. Everything stays on
+              your hard drive. Nothing leaves your machine.
+            </p>
+            <ul class="wa-showcase-card__list">
+              <li>Drag-and-drop CSV import: Spot, USD-M, COIN-M, Transaction History</li>
+              <li>Realised P&amp;L by symbol, by month, by side (long / short)</li>
+              <li>Funding rate + commission breakdown</li>
+              <li>Equity curve, drawdown, Sharpe вЂ” calculated locally</li>
+              <li>Export clean CSV / JSON for taxes or your accountant</li>
+            </ul>
+            <div class="wa-showcase-card__meta">
+              <span>Electron В· v0.8</span>
+              <span>В·</span>
+              <span>Win В· macOS В· Linux</span>
+            </div>
+            <div class="wa-showcase-card__cta">
+              <a href="/pages/contact#request" class="wa-button-primary">Notify me on launch</a>
+              <a href="/pages/contact" class="wa-button-ghost">Ask a question</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="wa-collection__showcase-foot">
+          Want a third tool? <a href="/pages/contact#request" class="wa-link-underline">Tell us what you wish existed.</a>
+        </p>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "WA Collection Page",
+  "tag": "section",
+  "class": "wa-section--bleed",
+  "settings": [],
+  "presets": [{ "name": "WA Collection Page" }]
+}
+{% endschema %}

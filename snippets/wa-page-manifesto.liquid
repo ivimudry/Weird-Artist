@@ -1,0 +1,112 @@
+{%- comment -%} Manifesto — long-form anti-SaaS manifesto for /pages/about {%- endcomment -%}
+<section class="wa-page wa-section--bleed" aria-labelledby="wa-manifesto-title">
+  <div class="wa-aurora" aria-hidden="true"><div class="wa-aurora__blob"></div></div>
+  <div class="wa-grain" aria-hidden="true"></div>
+
+  <div class="wa-container wa-page__inner">
+    <div class="wa-page__hero">
+      <span class="wa-eyebrow">{{ 'wa.about.eyebrow' | t }}</span>
+      <h1 id="wa-manifesto-title" class="wa-page__title">
+        {{ 'wa.about.title_a' | t }} <span class="wa-gradient-text">{{ 'wa.about.title_b' | t }}</span>
+      </h1>
+      <p class="wa-page__lede">
+        {{ 'wa.about.lede' | t }}
+      </p>
+    </div>
+
+    <div class="wa-page__layout">
+      <article class="wa-prose wa-page__article">
+
+        <h2>What we make</h2>
+        <p>
+          Desktop tools. Real binaries that live on your hard drive. They
+          start when you double-click them and stop when you close them. No
+          login screens. No <em>oops, our cloud is down today</em>. No
+          telemetry pinging some growth team in San Francisco about how often
+          you press <strong>Ctrl + S</strong>. No mandatory cookie banner that
+          bills you €0.04 every time you dismiss it.
+        </p>
+
+        <h2>Who they&rsquo;re for</h2>
+        <p>
+          People who already know what they&rsquo;re doing. CRM operators who
+          push ten campaigns a week. Traders staring at six exchange tabs.
+          Marketers who write better than the AI. Anyone whose workflow is
+          too specific for a SaaS dashboard built by people who&rsquo;ve
+          never done the work.
+        </p>
+
+        <h2>What we don&rsquo;t do</h2>
+        <ul>
+          <li>No subscriptions. No <em>seats</em>. No usage limits.</li>
+          <li>No cloud sync — your files stay on your disk.</li>
+          <li>No AI features bolted on so the deck looks fundable.</li>
+          <li>No license server that can brick your tool when our domain expires.</li>
+          <li>No analytics on your keystrokes.</li>
+          <li>No "Pro" tier that gates the feature you actually need.</li>
+        </ul>
+
+        <h2>How it works</h2>
+        <p>
+          You buy the tool once. You download the installer. You run it for
+          the next decade if you want. When we ship a major update,
+          you get it free for one year — then you decide if v2 is worth
+          another payment. Open file formats — your data is yours, in plain
+          JSON or CSV, the day you stop using us.
+        </p>
+
+        <h2>The deal</h2>
+        <p>
+          We make the tool. You pay once. We don&rsquo;t hassle you again. If
+          the company ever folds, the tool keeps working. If you ever want a
+          refund, ask within 30 days — no questions, no exit-survey form, no
+          "are you sure?" on the cancel button.
+        </p>
+
+        <h2>Why we&rsquo;re weird</h2>
+        <p>
+          Most software companies are growth machines pretending to be tool
+          makers. We&rsquo;re tool makers pretending to be a company. We don&rsquo;t
+          have a sales funnel. We don&rsquo;t A/B test the manifesto. We don&rsquo;t
+          have a Slack community. We have email and an issue tracker. That&rsquo;s
+          enough.
+        </p>
+
+        <p class="wa-page__signoff"><strong>Built once. Yours forever.</strong></p>
+      </article>
+
+      <aside class="wa-page__aside">
+        <div class="wa-page__panel">
+          <span class="wa-eyebrow">The pact</span>
+          <ul class="wa-page__pact">
+            <li><strong>Pay once.</strong> No recurring charges, ever.</li>
+            <li><strong>Yours offline.</strong> Works without internet, forever.</li>
+            <li><strong>Open data.</strong> JSON / CSV in, JSON / CSV out.</li>
+            <li><strong>Free year of updates.</strong> Major versions optional.</li>
+            <li><strong>30-day refund.</strong> No questions asked.</li>
+            <li><strong>Source escrow.</strong> If we vanish, the binary keeps running.</li>
+          </ul>
+        </div>
+
+        <div class="wa-page__panel wa-page__panel--quiet">
+          <span class="wa-eyebrow">Currently shipping</span>
+          <p class="wa-page__panel-line">
+            <strong>PromptGrid</strong> — desktop CRM workbench for Customer.io operators. Closed alpha.
+          </p>
+          <p class="wa-page__panel-line">
+            <strong>Exchange Analizer</strong> — local Binance P&amp;L analyzer. Q3 2026.
+          </p>
+          <a href="{{ routes.collections_url }}/all" class="wa-button-ghost wa-page__panel-cta">See both →</a>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wa-page__cta">
+      <h2 class="wa-page__cta-title">Ready to stop renting your workflow?</h2>
+      <div class="wa-page__cta-actions">
+        <a href="{{ routes.collections_url }}/all" class="wa-button-primary">Browse the tools</a>
+        <a href="/pages/contact" class="wa-button-ghost">Request something new</a>
+      </div>
+    </div>
+  </div>
+</section>

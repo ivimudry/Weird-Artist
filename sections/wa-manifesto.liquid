@@ -1,0 +1,27 @@
+<section class="wa-marquee wa-section--bleed" aria-label="Our principles">
+  <div class="wa-marquee__track" aria-hidden="true">
+    {%- for i in (1..2) -%}
+      <div class="wa-marquee__item">
+        <span>Pay once</span>           <span class="wa-diamond">◆</span>
+        <span>Runs locally</span>       <span class="wa-diamond">◆</span>
+        <span>No subscription</span>    <span class="wa-diamond">◆</span>
+        <span>No telemetry</span>       <span class="wa-diamond">◆</span>
+        <span>No cloud</span>           <span class="wa-diamond">◆</span>
+        <span>Yours forever</span>      <span class="wa-diamond">◆</span>
+      </div>
+    {%- endfor -%}
+  </div>
+  <span class="visually-hidden">
+    Pay once. Runs locally. No subscription. No telemetry. No cloud. Yours forever.
+  </span>
+</section>
+
+{% schema %}
+{
+  "name": "WA Manifesto Marquee",
+  "tag": "section",
+  "class": "wa-section--bleed",
+  "settings": [],
+  "presets": [{ "name": "WA Manifesto" }]
+}
+{% endschema %}

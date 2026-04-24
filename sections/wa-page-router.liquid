@@ -1,0 +1,57 @@
+{%- comment -%}
+  WA Page Router — render the right wa-* page section based on page.handle.
+  Avoids needing template_suffix to be set in admin per page.
+{%- endcomment -%}
+
+{%- assign h = page.handle -%}
+
+{%- if h == 'about' or h == 'manifesto' or h == 'manifest' -%}
+  {%- render 'wa-page-manifesto' -%}
+
+{%- elsif h == 'contact' or h == 'contact-us' or h == 'support' -%}
+  {%- render 'wa-page-contact' -%}
+
+{%- elsif h == 'request' or h == 'request-a-tool' or h == 'requests' -%}
+  {%- render 'wa-page-request' -%}
+
+{%- elsif h == 'privacy' or h == 'privacy-policy' -%}
+  {%- render 'wa-page-privacy' -%}
+
+{%- elsif h == 'terms' or h == 'terms-of-service' or h == 'terms-and-conditions' -%}
+  {%- render 'wa-page-terms' -%}
+
+{%- elsif h == 'refund' or h == 'refund-policy' or h == 'refunds' -%}
+  {%- render 'wa-page-refund' -%}
+
+{%- elsif h == 'tools' or h == 'all-tools' -%}
+  {%- render 'wa-page-tools' -%}
+
+{%- elsif h == 'crm-marketing' or h == 'crm' or h == 'marketing' -%}
+  {%- render 'wa-page-crm' -%}
+
+{%- elsif h == 'finance-trading' or h == 'finance' or h == 'trading' -%}
+  {%- render 'wa-page-finance' -%}
+
+{%- elsif h == 'promptgrid' or h == 'prompt-grid' -%}
+  {%- render 'wa-page-promptgrid' -%}
+
+{%- else -%}
+  <section class="wa-section--bleed" style="position:relative; overflow:hidden;">
+    <div class="wa-aurora" aria-hidden="true"><div class="wa-aurora__blob"></div></div>
+    <article class="wa-prose" style="position:relative; z-index:2;">
+      <span class="wa-eyebrow">{{ page.handle | upcase }}</span>
+      <h1 style="margin-top: var(--wa-space-4);">{{ page.title }}</h1>
+      {{ page.content }}
+    </article>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "WA Page Router",
+  "tag": "section",
+  "class": "wa-section--bleed",
+  "settings": [],
+  "presets": [{ "name": "WA Page Router" }]
+}
+{% endschema %}

@@ -1,0 +1,63 @@
+<section class="wa-featured wa-section--bleed" aria-labelledby="wa-featured-title">
+  <div class="wa-container wa-featured__inner">
+    <div class="wa-featured__copy">
+      <span class="wa-eyebrow">Featured tool</span>
+      <h2 id="wa-featured-title" class="wa-featured__title">PromptGrid</h2>
+      <p class="wa-featured__desc">
+        Visual email & SMS template builder. Build, version, and ship
+        customer.io / Stripo campaigns from your desktop.
+      </p>
+      <ul class="wa-featured__list">
+        <li>Drag-and-drop block editor with live preview across clients</li>
+        <li>Template versioning with local git-style history</li>
+        <li>One-click export to customer.io, Stripo, or raw HTML</li>
+        <li>Works offline. Your campaigns never leave your machine.</li>
+      </ul>
+      <p class="wa-featured__price">
+        <strong>Coming Q3 2026</strong> · $149 one-time
+      </p>
+      <a href="/products/promptgrid" class="wa-button-primary">View product</a>
+    </div>
+
+    <div class="wa-featured__mockup" aria-hidden="true">
+      <div class="wa-app-window">
+        <div class="wa-app-window__bar">
+          <div class="wa-app-window__lights"><span></span><span></span><span></span></div>
+          <div class="wa-app-window__title">PromptGrid · Templates</div>
+          <div style="width: 36px;"></div>
+        </div>
+        <div class="wa-app-pg">
+          <aside class="wa-app-pg__sidebar">
+            <div class="wa-app-pg__sidebar-item wa-app-pg__sidebar-item--active"></div>
+            <div class="wa-app-pg__sidebar-item" style="width: 75%;"></div>
+            <div class="wa-app-pg__sidebar-item" style="width: 90%;"></div>
+            <div class="wa-app-pg__sidebar-item" style="width: 60%;"></div>
+            <div class="wa-app-pg__sidebar-item" style="width: 80%;"></div>
+            <div class="wa-app-pg__sidebar-item" style="width: 50%;"></div>
+          </aside>
+          <div class="wa-app-pg__canvas">
+            <div class="wa-app-pg__tile wa-app-pg__tile--accent"></div>
+            <div class="wa-app-pg__tile"></div>
+            <div class="wa-app-pg__tile"></div>
+            <div class="wa-app-pg__tile"></div>
+            <div class="wa-app-pg__tile wa-app-pg__tile--accent"></div>
+            <div class="wa-app-pg__tile"></div>
+            <div class="wa-app-pg__tile"></div>
+            <div class="wa-app-pg__tile"></div>
+            <div class="wa-app-pg__tile wa-app-pg__tile--accent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "WA Featured Product",
+  "tag": "section",
+  "class": "wa-section--bleed",
+  "settings": [],
+  "presets": [{ "name": "WA Featured Product" }]
+}
+{% endschema %}

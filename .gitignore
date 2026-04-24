@@ -7,3 +7,16 @@
 
 # Screenshots
 скріни/
+
+# Debug HTML dumps
+*.html
+!templates/*.html
+!snippets/*.html
+_remote_check/
+
+# Script logs
+scripts/*.log
+
+# Local-only template variants
+templates/*.local.json
+

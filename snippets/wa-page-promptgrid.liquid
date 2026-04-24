@@ -1,0 +1,54 @@
+{%- comment -%}
+  WA Page — PromptGrid product detail.
+  Standalone Shopify page (handle: promptgrid). Mirrors the showcase card
+  from /pages/crm-marketing but with a richer, hero-style layout.
+{%- endcomment -%}
+
+<section class="wa-collection wa-section--bleed" aria-labelledby="wa-pg-title">
+  <div class="wa-aurora wa-aurora--soft" aria-hidden="true"></div>
+
+  <div class="wa-container wa-collection__inner">
+    <header class="wa-collection__header" style="text-align: center; max-width: 760px; margin: 0 auto var(--wa-space-12);">
+      <span class="wa-eyebrow">{{ 'wa.pg.eyebrow' | t }}</span>
+      <h1 id="wa-pg-title" class="wa-collection__title">
+        {{ 'wa.pg.title_a' | t }}
+        <span class="wa-gradient-text">{{ 'wa.pg.title_b' | t }}</span>
+      </h1>
+      <p class="wa-collection__desc wa-prose" style="margin: var(--wa-space-4) auto 0;">
+        {{ 'wa.pg.lede' | t }}
+      </p>
+    </header>
+
+    <div class="wa-showcase-grid" style="grid-template-columns: minmax(0, 820px); justify-content: center;">
+      <article class="wa-showcase-card">
+        <div class="wa-showcase-card__head">
+          <span class="wa-showcase-card__badge wa-showcase-card__badge--alpha">{{ 'wa.pg.badge' | t }}</span>
+          <span class="wa-showcase-card__price">$149 once</span>
+        </div>
+        <h2 class="wa-showcase-card__title">PromptGrid</h2>
+        <p class="wa-showcase-card__tag">{{ 'wa.pg.tag' | t }}</p>
+        <p class="wa-showcase-card__desc">{{ 'wa.pg.desc' | t }}</p>
+        <ul class="wa-showcase-card__list">
+          <li>{{ 'wa.pg.f1' | t }}</li>
+          <li>{{ 'wa.pg.f2' | t }}</li>
+          <li>{{ 'wa.pg.f3' | t }}</li>
+          <li>{{ 'wa.pg.f4' | t }}</li>
+          <li>{{ 'wa.pg.f5' | t }}</li>
+        </ul>
+        <div class="wa-showcase-card__meta">
+          <span>Electron · v1.3</span>
+          <span>·</span>
+          <span>Win · macOS · Linux</span>
+        </div>
+        <div class="wa-showcase-card__cta">
+          <a href="/pages/contact#request" class="wa-button-primary">{{ 'wa.pg.cta_alpha' | t }}</a>
+          <a href="/pages/crm-marketing" class="wa-button-ghost">{{ 'wa.pg.cta_more' | t }}</a>
+        </div>
+      </article>
+    </div>
+
+    <p class="wa-collection__showcase-foot" style="text-align: center; margin-top: var(--wa-space-10);">
+      <a href="/pages/tools" class="wa-link-underline">← {{ 'wa.cat.back' | t }}</a>
+    </p>
+  </div>
+</section>

@@ -1,0 +1,80 @@
+<section class="wa-section--bleed" aria-labelledby="wa-request-page-title" style="position:relative; overflow:hidden;">
+  <div class="wa-aurora" aria-hidden="true"><div class="wa-aurora__blob"></div></div>
+  <div class="wa-grain" aria-hidden="true"></div>
+
+  <div class="wa-prose" style="position:relative; z-index:2;">
+    <span class="wa-eyebrow">Open requests</span>
+    <h1 id="wa-request-page-title" style="margin-top: var(--wa-space-4);">
+      Request a <span class="wa-gradient-text">tool.</span>
+    </h1>
+    <p>
+      The roadmap is open. Tell us what you wish existed — what spreadsheet
+      you keep duct-taping, what SaaS you keep cancelling and resubscribing to,
+      what report you build by hand every Monday morning.
+    </p>
+    <p>
+      If 10 people ask for the same thing, we&rsquo;ll build it. If you&rsquo;re
+      the only one, we&rsquo;ll still read it, and if it&rsquo;s clever
+      enough, we&rsquo;ll build it anyway.
+    </p>
+
+    {%- form 'contact', id: 'wa-request-form', class: 'wa-form', return_to: request.path -%}
+      {%- if form.posted_successfully? -%}
+        <div class="wa-glass" style="padding: var(--wa-space-6); margin-block: var(--wa-space-8);">
+          <strong style="color: var(--wa-text-primary);">Thanks. Got it.</strong>
+          <p style="color: var(--wa-text-secondary); margin-top: var(--wa-space-2);">
+            We read every request. If yours fits the workshop, you&rsquo;ll hear back.
+          </p>
+        </div>
+      {%- elsif form.errors -%}
+        <div class="wa-glass" style="padding: var(--wa-space-5); margin-block: var(--wa-space-6); border-color: var(--wa-accent-danger);">
+          <strong style="color: var(--wa-accent-danger);">Something didn&rsquo;t go through:</strong>
+          <ul style="margin-top: var(--wa-space-2); padding-left: 1.2em; list-style: disc; color: var(--wa-text-secondary);">
+            {%- for error in form.errors -%}
+              <li>{{ form.errors.messages[error] }}</li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endif -%}
+
+      <div class="wa-form__row">
+        <label class="wa-form__label" for="wa-req-name">Your name</label>
+        <input class="wa-input" type="text" id="wa-req-name" name="contact[name]" required>
+      </div>
+
+      <div class="wa-form__row">
+        <label class="wa-form__label" for="wa-req-email">Email</label>
+        <input class="wa-input" type="email" id="wa-req-email" name="contact[email]" autocomplete="email" required>
+      </div>
+
+      <div class="wa-form__row">
+        <label class="wa-form__label" for="wa-req-category">Category</label>
+        <select class="wa-select" id="wa-req-category" name="contact[category]">
+          <option>CRM &amp; Marketing</option>
+          <option>Finance &amp; Trading</option>
+          <option>Productivity / Other</option>
+        </select>
+      </div>
+
+      <div class="wa-form__row">
+        <label class="wa-form__label" for="wa-req-tool">What tool do you wish existed?</label>
+        <textarea class="wa-textarea" id="wa-req-tool" name="contact[body]" rows="6" placeholder="The shorter and weirder, the better." required></textarea>
+        <span class="wa-form__hint">No NDAs. No fluff. Just describe what would save you the most time.</span>
+      </div>
+
+      <div>
+        <button type="submit" class="wa-button-primary">Send request</button>
+      </div>
+    {%- endform -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "WA Request Page",
+  "tag": "section",
+  "class": "wa-section--bleed",
+  "settings": [],
+  "presets": [{ "name": "WA Request Page" }]
+}
+{% endschema %}

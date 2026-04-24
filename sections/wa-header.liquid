@@ -1,0 +1,110 @@
+﻿<header class="wa-header" id="wa-header" role="banner" data-wa-header>
+  <div class="wa-header__inner">
+    <a href="{{ routes.root_url }}" class="wa-header__logo" aria-label="Weird Artist — home">
+      {%- render 'wa-logo' -%}
+      <span class="wa-header__logo-text">Weird Artist</span>
+    </a>
+
+    <nav class="wa-header__nav" aria-label="Primary">
+      <a href="/pages/tools" class="wa-link-underline">{{ 'wa.nav.tools' | t }}</a>
+      <a href="/pages/about" class="wa-link-underline">{{ 'wa.nav.about' | t }}</a>
+      <a href="/pages/contact#request" class="wa-link-underline">{{ 'wa.nav.request' | t }}</a>
+      <a href="/pages/contact" class="wa-link-underline">{{ 'wa.nav.contact' | t }}</a>
+    </nav>
+
+    <div class="wa-header__cta">
+      <a href="/pages/tools" class="wa-button-primary wa-header__cta-btn">{{ 'wa.cta.get_a_tool' | t }}</a>
+      <button
+        type="button"
+        class="wa-header__hamburger"
+        id="wa-hamburger"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="wa-mobile-menu"
+      >
+        <span class="wa-header__hamburger-bars" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div class="wa-mobile-menu" id="wa-mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation" hidden>
+    <nav class="wa-mobile-menu__nav" aria-label="Mobile primary">
+      <a href="/pages/tools" data-wa-menu-link>{{ 'wa.nav.tools' | t }}</a>
+      <a href="/pages/about" data-wa-menu-link>{{ 'wa.nav.about' | t }}</a>
+      <a href="/pages/contact#request" data-wa-menu-link>{{ 'wa.nav.request' | t }}</a>
+      <a href="/pages/contact" data-wa-menu-link>{{ 'wa.nav.contact' | t }}</a>
+    </nav>
+    <div class="wa-mobile-menu__foot">
+      <a href="/pages/tools" class="wa-button-primary wa-mobile-menu__cta" data-wa-menu-link>{{ 'wa.cta.get_a_tool' | t }}</a>
+      <p class="wa-mobile-menu__meta">
+        <span>Weird Artist</span>·<span>{{ 'wa.tagline' | t }}</span>
+      </p>
+    </div>
+  </div>
+</header>
+
+<script>
+  (function () {
+    var header = document.getElementById('wa-header');
+    var hamburger = document.getElementById('wa-hamburger');
+    var menu = document.getElementById('wa-mobile-menu');
+    if (!header || !hamburger || !menu) return;
+
+    var applyScroll = function () {
+      if (window.scrollY > 12) header.classList.add('is-scrolled');
+      else header.classList.remove('is-scrolled');
+    };
+    applyScroll();
+    window.addEventListener('scroll', applyScroll, { passive: true });
+
+    var isOpen = false;
+    var open = function () {
+      isOpen = true;
+      menu.hidden = false;
+      requestAnimationFrame(function () { menu.classList.add('is-open'); });
+      hamburger.classList.add('is-active');
+      hamburger.setAttribute('aria-expanded', 'true');
+      hamburger.setAttribute('aria-label', 'Close menu');
+      document.documentElement.classList.add('wa-no-scroll');
+      document.body.classList.add('wa-no-scroll');
+    };
+    var close = function () {
+      isOpen = false;
+      menu.classList.remove('is-open');
+      hamburger.classList.remove('is-active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Open menu');
+      document.documentElement.classList.remove('wa-no-scroll');
+      document.body.classList.remove('wa-no-scroll');
+      setTimeout(function () { if (!isOpen) menu.hidden = true; }, 320);
+    };
+    hamburger.addEventListener('click', function () {
+      if (isOpen) close(); else open();
+    });
+    menu.querySelectorAll('[data-wa-menu-link]').forEach(function (a) {
+      a.addEventListener('click', close);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && isOpen) close();
+    });
+    var mq = window.matchMedia('(min-width: 1024px)');
+    var onMq = function (e) { if (e.matches && isOpen) close(); };
+    if (mq.addEventListener) mq.addEventListener('change', onMq);
+    else if (mq.addListener) mq.addListener(onMq);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "WA Header",
+  "tag": "section",
+  "class": "wa-section--bleed",
+  "settings": [],
+  "presets": [
+    { "name": "WA Header" }
+  ],
+  "enabled_on": { "groups": ["header"] }
+}
+{% endschema %}

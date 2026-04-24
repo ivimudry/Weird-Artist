@@ -1,0 +1,75 @@
+<section class="wa-section--bleed" aria-labelledby="wa-contact-page-title" style="position:relative; overflow:hidden;">
+  <div class="wa-aurora" aria-hidden="true"><div class="wa-aurora__blob"></div></div>
+  <div class="wa-grain" aria-hidden="true"></div>
+
+  <div class="wa-prose" style="position:relative; z-index:2;">
+    <span class="wa-eyebrow">Contact</span>
+    <h1 id="wa-contact-page-title" style="margin-top: var(--wa-space-4);">
+      Talk to a <span class="wa-gradient-text">human.</span>
+    </h1>
+    <p>
+      Feature requests, refund questions, partnership ideas, or just the urge
+      to tell us we got the manifesto wrong — write in. One person reads every
+      message and replies within two business days.
+    </p>
+
+    <div style="display:grid; gap: var(--wa-space-3); margin-block: var(--wa-space-8); font-family: var(--wa-font-mono); font-size: var(--wa-text-sm); color: var(--wa-text-secondary);">
+      <div><span style="color: var(--wa-text-muted);">EMAIL · </span> <a href="mailto:hello@weirdartist.io" style="color: var(--wa-brand-cyan);">hello@weirdartist.io</a></div>
+      <div><span style="color: var(--wa-text-muted);">SUPPORT · </span> <a href="mailto:support@weirdartist.io" style="color: var(--wa-brand-cyan);">support@weirdartist.io</a></div>
+    </div>
+
+    {%- form 'contact', id: 'wa-contact-form', class: 'wa-form', return_to: request.path -%}
+      {%- if form.posted_successfully? -%}
+        <div class="wa-glass" style="padding: var(--wa-space-6); margin-block: var(--wa-space-8);">
+          <strong style="color: var(--wa-text-primary);">Message received.</strong>
+          <p style="color: var(--wa-text-secondary); margin-top: var(--wa-space-2);">
+            You&rsquo;ll hear back within two business days.
+          </p>
+        </div>
+      {%- elsif form.errors -%}
+        <div class="wa-glass" style="padding: var(--wa-space-5); margin-block: var(--wa-space-6); border-color: var(--wa-accent-danger);">
+          <strong style="color: var(--wa-accent-danger);">Couldn&rsquo;t send:</strong>
+          <ul style="margin-top: var(--wa-space-2); padding-left: 1.2em; list-style: disc; color: var(--wa-text-secondary);">
+            {%- for error in form.errors -%}
+              <li>{{ form.errors.messages[error] }}</li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endif -%}
+
+      <div class="wa-form__row">
+        <label class="wa-form__label" for="wa-c-name">Your name</label>
+        <input class="wa-input" type="text" id="wa-c-name" name="contact[name]" required>
+      </div>
+
+      <div class="wa-form__row">
+        <label class="wa-form__label" for="wa-c-email">Email</label>
+        <input class="wa-input" type="email" id="wa-c-email" name="contact[email]" autocomplete="email" required>
+      </div>
+
+      <div class="wa-form__row">
+        <label class="wa-form__label" for="wa-c-subject">Subject</label>
+        <input class="wa-input" type="text" id="wa-c-subject" name="contact[subject]" placeholder="Refund / partnership / bug / other">
+      </div>
+
+      <div class="wa-form__row">
+        <label class="wa-form__label" for="wa-c-body">Message</label>
+        <textarea class="wa-textarea" id="wa-c-body" name="contact[body]" rows="6" required></textarea>
+      </div>
+
+      <div>
+        <button type="submit" class="wa-button-primary">Send message</button>
+      </div>
+    {%- endform -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "WA Contact Page",
+  "tag": "section",
+  "class": "wa-section--bleed",
+  "settings": [],
+  "presets": [{ "name": "WA Contact Page" }]
+}
+{% endschema %}

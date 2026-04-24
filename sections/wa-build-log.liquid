@@ -1,0 +1,64 @@
+<section class="wa-buildlog wa-section--bleed" aria-labelledby="wa-buildlog-title">
+  <div class="wa-container">
+    <header class="wa-buildlog__head">
+      <span class="wa-eyebrow">Build log · public</span>
+      <h2 id="wa-buildlog-title" class="wa-buildlog__title">What we&rsquo;re shipping next.</h2>
+      <p style="color: var(--wa-text-secondary); max-width: 56ch;">
+        Live progress on every tool in the workshop. No vapor, no roadmap theater —
+        just what&rsquo;s actually being written today.
+      </p>
+    </header>
+
+    <div class="wa-buildlog__list">
+      <div class="wa-buildlog__row">
+        <div class="wa-buildlog__name">PromptGrid</div>
+        <div class="wa-buildlog__desc">Email &amp; SMS template builder for customer.io / Stripo workflows.</div>
+        <div class="wa-buildlog__progress">
+          <div class="wa-buildlog__bar"><div class="wa-buildlog__bar-fill" style="--wa-progress: 0.75;"></div></div>
+          <div class="wa-buildlog__pct wa-mono">75%</div>
+        </div>
+        <div class="wa-buildlog__status" data-status="building">Building</div>
+      </div>
+
+      <div class="wa-buildlog__row">
+        <div class="wa-buildlog__name">Binance Analyzer</div>
+        <div class="wa-buildlog__desc">Trading P/L analyzer for Binance CSV exports. Local, no API keys required.</div>
+        <div class="wa-buildlog__progress">
+          <div class="wa-buildlog__bar"><div class="wa-buildlog__bar-fill" style="--wa-progress: 0.40;"></div></div>
+          <div class="wa-buildlog__pct wa-mono">40%</div>
+        </div>
+        <div class="wa-buildlog__status" data-status="building">Building</div>
+      </div>
+
+      <div class="wa-buildlog__row">
+        <div class="wa-buildlog__name">TBD CRM Tool</div>
+        <div class="wa-buildlog__desc">Working on it. Probably segmentation. Tell us what you need.</div>
+        <div class="wa-buildlog__progress">
+          <div class="wa-buildlog__bar"><div class="wa-buildlog__bar-fill" style="--wa-progress: 0.15;"></div></div>
+          <div class="wa-buildlog__pct wa-mono">15%</div>
+        </div>
+        <div class="wa-buildlog__status" data-status="designing">Designing</div>
+      </div>
+
+      <div class="wa-buildlog__row">
+        <div class="wa-buildlog__name">TBD Trading Tool</div>
+        <div class="wa-buildlog__desc">Researching the boring parts so you don&rsquo;t have to.</div>
+        <div class="wa-buildlog__progress">
+          <div class="wa-buildlog__bar"><div class="wa-buildlog__bar-fill" style="--wa-progress: 0.05;"></div></div>
+          <div class="wa-buildlog__pct wa-mono">5%</div>
+        </div>
+        <div class="wa-buildlog__status" data-status="researching">Researching</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "WA Build Log",
+  "tag": "section",
+  "class": "wa-section--bleed",
+  "settings": [],
+  "presets": [{ "name": "WA Build Log" }]
+}
+{% endschema %}

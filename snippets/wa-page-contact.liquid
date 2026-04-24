@@ -1,0 +1,164 @@
+{%- comment -%} Contact + Request page (combined) {%- endcomment -%}
+{%- assign mode_param = request.path | append: '' -%}
+<section class="wa-page wa-section--bleed" aria-labelledby="wa-contact-title">
+  <div class="wa-aurora" aria-hidden="true"><div class="wa-aurora__blob"></div></div>
+  <div class="wa-grain" aria-hidden="true"></div>
+
+  <div class="wa-container wa-page__inner">
+    <div class="wa-page__hero">
+      <span class="wa-eyebrow">{{ 'wa.contact.eyebrow' | t }}</span>
+      <h1 id="wa-contact-title" class="wa-page__title">
+        {{ 'wa.contact.title_a' | t }} <span class="wa-gradient-text">{{ 'wa.contact.title_b' | t }}</span>
+      </h1>
+      <p class="wa-page__lede">
+        {{ 'wa.contact.lede' | t }}
+      </p>
+    </div>
+
+    <div class="wa-page__layout">
+      <div class="wa-page__article">
+        <div class="wa-page__tabs" role="tablist">
+          <a href="#message" class="wa-page__tab is-active" role="tab" data-wa-tab="message">{{ 'wa.contact.tab_message' | t }}</a>
+          <a href="#request" class="wa-page__tab" role="tab" data-wa-tab="request">{{ 'wa.contact.tab_request' | t }}</a>
+        </div>
+
+        <div class="wa-page__panel" id="message" data-wa-panel="message">
+          <p class="wa-page__panel-intro">
+            {{ 'wa.contact.message_intro' | t }}
+          </p>
+
+          {%- form 'contact', id: 'wa-contact-form', class: 'wa-form', return_to: request.path -%}
+            {%- if form.posted_successfully? -%}
+              <div class="wa-glass wa-page__success">
+                <strong>{{ 'wa.contact.success_title' | t }}</strong>
+                <p>{{ 'wa.contact.success_body' | t }}</p>
+              </div>
+            {%- elsif form.errors -%}
+              <div class="wa-glass wa-page__error">
+                <strong>{{ 'wa.contact.error_title' | t }}</strong>
+                <ul>
+                  {%- for error in form.errors -%}
+                    <li>{{ form.errors.messages[error] }}</li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+            {%- endif -%}
+
+            <div class="wa-form__row">
+              <label class="wa-form__label" for="wa-c-name">{{ 'wa.form.name' | t }}</label>
+              <input class="wa-input" type="text" id="wa-c-name" name="contact[name]" required>
+            </div>
+            <div class="wa-form__row">
+              <label class="wa-form__label" for="wa-c-email">{{ 'wa.form.email' | t }}</label>
+              <input class="wa-input" type="email" id="wa-c-email" name="contact[email]" autocomplete="email" required>
+            </div>
+            <div class="wa-form__row">
+              <label class="wa-form__label" for="wa-c-subject">{{ 'wa.form.subject' | t }}</label>
+              <input class="wa-input" type="text" id="wa-c-subject" name="contact[subject]" placeholder="{{ 'wa.form.subject_placeholder' | t }}">
+            </div>
+            <div class="wa-form__row">
+              <label class="wa-form__label" for="wa-c-body">{{ 'wa.form.message' | t }}</label>
+              <textarea class="wa-textarea" id="wa-c-body" name="contact[body]" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="wa-button-primary">{{ 'wa.cta.send_message' | t }}</button>
+          {%- endform -%}
+        </div>
+
+        <div class="wa-page__panel wa-page__panel--hidden" id="request" data-wa-panel="request">
+          <p class="wa-page__panel-intro">
+            {{ 'wa.contact.request_intro' | t }}
+          </p>
+
+          {%- form 'contact', id: 'wa-request-form', class: 'wa-form', return_to: request.path -%}
+            {%- if form.posted_successfully? -%}
+              <div class="wa-glass wa-page__success">
+                <strong>{{ 'wa.contact.request_success_title' | t }}</strong>
+                <p>{{ 'wa.contact.request_success_body' | t }}</p>
+              </div>
+            {%- endif -%}
+
+            <input type="hidden" name="contact[subject]" value="Tool request">
+
+            <div class="wa-form__row">
+              <label class="wa-form__label" for="wa-r-name">{{ 'wa.form.name' | t }}</label>
+              <input class="wa-input" type="text" id="wa-r-name" name="contact[name]" required>
+            </div>
+            <div class="wa-form__row">
+              <label class="wa-form__label" for="wa-r-email">{{ 'wa.form.email' | t }}</label>
+              <input class="wa-input" type="email" id="wa-r-email" name="contact[email]" autocomplete="email" required>
+            </div>
+            <div class="wa-form__row">
+              <label class="wa-form__label" for="wa-r-cat">{{ 'wa.form.category' | t }}</label>
+              <select class="wa-select" id="wa-r-cat" name="contact[category]">
+                <option>{{ 'wa.form.cat_crm' | t }}</option>
+                <option>{{ 'wa.form.cat_finance' | t }}</option>
+                <option>{{ 'wa.form.cat_other' | t }}</option>
+              </select>
+            </div>
+            <div class="wa-form__row">
+              <label class="wa-form__label" for="wa-r-body">{{ 'wa.form.request_what' | t }}</label>
+              <textarea class="wa-textarea" id="wa-r-body" name="contact[body]" rows="6" placeholder="{{ 'wa.form.request_placeholder' | t }}" required></textarea>
+              <span class="wa-form__hint">{{ 'wa.form.request_hint' | t }}</span>
+            </div>
+            <button type="submit" class="wa-button-primary">{{ 'wa.cta.send_request' | t }}</button>
+          {%- endform -%}
+        </div>
+      </div>
+
+      <aside class="wa-page__aside">
+        <div class="wa-page__panel wa-page__panel--quiet">
+          <span class="wa-eyebrow">{{ 'wa.contact.direct_lines' | t }}</span>
+          <ul class="wa-page__contacts">
+            <li>
+              <span class="wa-page__contacts-label">{{ 'wa.contact.label_hello' | t }}</span>
+              <a href="mailto:hello@weirdartist.io">hello@weirdartist.io</a>
+            </li>
+            <li>
+              <span class="wa-page__contacts-label">{{ 'wa.contact.label_support' | t }}</span>
+              <a href="mailto:support@weirdartist.io">support@weirdartist.io</a>
+            </li>
+            <li>
+              <span class="wa-page__contacts-label">{{ 'wa.contact.label_refund' | t }}</span>
+              <a href="mailto:refund@weirdartist.io">refund@weirdartist.io</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="wa-page__panel">
+          <span class="wa-eyebrow">{{ 'wa.contact.reply_window' | t }}</span>
+          <p class="wa-page__panel-line">
+            {{ 'wa.contact.reply_main' | t }}
+          </p>
+          <p class="wa-page__panel-line wa-page__panel-line--mute">
+            {{ 'wa.contact.reply_mute' | t }}
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var tabs = document.querySelectorAll('[data-wa-tab]');
+    var panels = document.querySelectorAll('[data-wa-panel]');
+    if (!tabs.length) return;
+    function activate(name) {
+      tabs.forEach(function (t) {
+        t.classList.toggle('is-active', t.getAttribute('data-wa-tab') === name);
+      });
+      panels.forEach(function (p) {
+        p.classList.toggle('wa-page__panel--hidden', p.getAttribute('data-wa-panel') !== name);
+      });
+    }
+    tabs.forEach(function (t) {
+      t.addEventListener('click', function (e) {
+        e.preventDefault();
+        var name = t.getAttribute('data-wa-tab');
+        activate(name);
+        history.replaceState(null, '', '#' + name);
+      });
+    });
+    if (window.location.hash === '#request') activate('request');
+  })();
+</script>
